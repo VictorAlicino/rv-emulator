@@ -1,9 +1,13 @@
-ifeq ($(OS),Windows_NT)
 RPI_VERSION ?= 3
+PL = gcc
+
+
+ifeq ($(OS),Windows_NT)
+
 
 BOOTMNT ?= bootmnt
 
-ARMGNU ?= aarch64-none-linux-gnu-gcc
+ARMGNU ?= aarch64-none-linux-gnu-$(PL)
 
 COPS = -DRPI_VERSION=$(RPI_VERSION) -Wall -nostdlib -nostartfiles -ffreestanding \
 	   -Iinclude -mgeneral-regs-only
@@ -20,11 +24,11 @@ clean :
 
 $(BUILD_DIR)/%_c.o: $(SRC_DIR)/%.c
 	mkdir $(subst /,\,$(@D))
-	$(ARMGNU)-gcc $(COPS) -MMD -c $< -o $@
+	$(ARMGNU)-$(PL) $(COPS) -MMD -c $< -o $@
 
 $(BUILD_DIR)/%_s.o: $(SRC_DIR)/%.S
 	mkdir $(subst /,\,$(@D))
-	$(ARMGNU)-gcc $(COPS) -MMD -c $< -o $@
+	$(ARMGNU)-$(PL) $(COPS) -MMD -c $< -o $@
 
 C_FILES = $(wildcard $(SRC_DIR)/*.c)
 ASM_FILES = $(wildcard $(SRC_DIR)/*.S)
@@ -47,8 +51,10 @@ else
 endif
 	cp config.txt $(BOOTMNT)/
 	sync
+	@echo "Build sucessful"
+
 else
-RPI_VERSION ?= 3
+
 
 BOOTMNT ?= bootmnt
 
@@ -69,11 +75,11 @@ clean :
 
 $(BUILD_DIR)/%_c.o: $(SRC_DIR)/%.c
 	mkdir -p $(@D)
-	$(ARMGNU)-gcc $(COPS) -MMD -c $< -o $@
+	$(ARMGNU)-$(PL) $(COPS) -MMD -c $< -o $@
 
 $(BUILD_DIR)/%_s.o: $(SRC_DIR)/%.S
 	mkdir -p $(@D)
-	$(ARMGNU)-gcc $(COPS) -MMD -c $< -o $@
+	$(ARMGNU)-$(PL) $(COPS) -MMD -c $< -o $@
 
 C_FILES = $(wildcard $(SRC_DIR)/*.c)
 ASM_FILES = $(wildcard $(SRC_DIR)/*.S)
@@ -96,5 +102,6 @@ else
 endif
 	cp config.txt $(BOOTMNT)/
 	sync
+	@echo "Build sucessful"
 endif
 
