@@ -12,13 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bda576ef-b014-4ed6-89c7-f4b99d36e43b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_unit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_cycle_cpu.py" beforeDir="false" afterPath="$PROJECT_DIR$/single_cycle_cpu.py" afterDir="false" />
-    </list>
+    <list default="true" id="bda576ef-b014-4ed6-89c7-f4b99d36e43b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +99,7 @@
       <workItem from="1682101679300" duration="34000" />
       <workItem from="1682125955371" duration="9000" />
       <workItem from="1682185025480" duration="177000" />
-      <workItem from="1682399818875" duration="4442000" />
+      <workItem from="1682399818875" duration="4475000" />
     </task>
     <servers />
   </component>
