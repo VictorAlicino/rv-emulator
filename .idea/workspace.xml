@@ -3,41 +3,29 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bda576ef-b014-4ed6-89c7-f4b99d36e43b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/rv-emulator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/control_unit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file_processor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/single_cycle_cpu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/DDI0500J_cortex_a53_trm.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/bcm2836-peripherals.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/common.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/gpio.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/memory_management.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/mini_uart.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/peripherals/aux_.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/peripherals/base.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/peripherals/gpio.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/utils.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boot.S" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gpio.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linker.ld" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memory_management.S" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mini_uart.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.S" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_unit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single_cycle_cpu.py" beforeDir="false" afterPath="$PROJECT_DIR$/single_cycle_cpu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,21 +46,24 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/victo/Documents/Universidade/PDI/T3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/victo/Documents/GitRepos/RGB-Adventure/MCU/RGB&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="rv-emulator" />
@@ -110,7 +101,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680549956911</updated>
-      <workItem from="1680549975332" duration="10548000" />
+      <workItem from="1680549975332" duration="10734000" />
+      <workItem from="1682101679300" duration="34000" />
+      <workItem from="1682125955371" duration="9000" />
+      <workItem from="1682185025480" duration="177000" />
+      <workItem from="1682399818875" duration="4442000" />
     </task>
     <servers />
   </component>
@@ -118,6 +113,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/rv_emulator$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1680582675632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/rv_emulator$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1682403006761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
