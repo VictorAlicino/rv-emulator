@@ -1,17 +1,18 @@
 # Constants for control signals
-ADD = '000000'
+ADD = '0110011'
 SUB = '000001'
 AND = '000010'
 OR = '000011'
-ADDI = '000100'
-LW = '000101'
-SW = '000110'
+ADDI = '0010011'
+LW = '0000011'
+SW = '0100011'
 BEQ = '000111'
 BNE = '001000'
 
 
 class ControlUnit:
     def __init__(self):
+        self.last_instruction: str = ""
         self.branch: bool = False
         self.mem_read: bool = False
         self.mem_to_reg: bool = False
@@ -21,6 +22,7 @@ class ControlUnit:
         self.reg_write: bool = False
 
     def set_control_signals(self, opcode: str):
+        self.last_instruction = f"{opcode} | {'ADD' if opcode == ADD else 'SUB' if opcode == SUB else 'AND' if opcode == AND else 'OR' if opcode == OR else 'ADDI' if opcode == ADDI else 'LW' if opcode == LW else 'SW' if opcode == SW else 'BEQ' if opcode == BEQ else 'BNE' if opcode == BNE else 'unknown opcode'}"
         control_signals = {
             ADD: {"alu_op": True},
             SUB: {"alu_op": True},

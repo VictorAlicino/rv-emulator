@@ -1,4 +1,5 @@
 from control_unit import ControlUnit
+import control_unit
 import logging
 
 
@@ -48,12 +49,12 @@ class RiscV:
             return False
 
         # Sending the bites to the correct data path
-        opcode = instruction[0:6]
+        opcode = instruction[25:32]
         self._control.set_control_signals(opcode)
-
 
         logging.debug(f'\nInstruction at {addr}: {instruction}\n'
                       f'-----Control signals-----\n'
+                      f'Instruction Type: {self._control.last_instruction} \n'
                       f'Branch: {self._control.branch} \n'
                       f'Mem Read: {self._control.mem_read} \n'
                       f'Mem to Reg: {self._control.mem_to_reg} \n'
