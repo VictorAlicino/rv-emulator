@@ -3440,3 +3440,589 @@ Mem Write: True
 ALU Src: True 
 Reg Write: True
 
+2023-04-27 11:53:37,109 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/teste1 2 e 3/teste1.txt
+2023-04-27 11:53:37,116 Loaded 12 instructions
+2023-04-27 11:53:37,116 
+Instruction at 00: 00000000001100000000001010010011
+-----Control signals-----
+Instruction Type: 0010011 | ADDI 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: False 
+ALU Src: False 
+Reg Write: False
+
+2023-04-27 11:53:37,116 
+Instruction at 04: 00000000101000000000001100010011
+-----Control signals-----
+Instruction Type: 0010011 | ADDI 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: False 
+ALU Src: False 
+Reg Write: False
+
+2023-04-27 11:53:37,116 
+Instruction at 08: 00000001010000000000010100010011
+-----Control signals-----
+Instruction Type: 0010011 | ADDI 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: False 
+ALU Src: False 
+Reg Write: False
+
+2023-04-27 11:53:37,117 
+Instruction at 0c: 00000000010101010010000000100011
+-----Control signals-----
+Instruction Type: 0100011 | SW 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: False
+
+2023-04-27 11:53:37,119 
+Instruction at 10: 00000000011001010010001000100011
+-----Control signals-----
+Instruction Type: 0100011 | SW 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: False
+
+2023-04-27 11:53:37,121 
+Instruction at 14: 00000000000001010010010110000011
+-----Control signals-----
+Instruction Type: 0000011 | LW 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 11:53:37,122 
+Instruction at 18: 00000000010001010010011000000011
+-----Control signals-----
+Instruction Type: 0000011 | LW 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 11:53:37,123 
+Instruction at 1c: 00000000110001011000011100110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 11:53:37,125 
+Instruction at 20: 01000000101101100000011110110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 11:53:37,126 
+Instruction at 24: 01000000110001011000100000110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 11:53:37,127 
+Instruction at 28: 00000000101101100111100010110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 11:53:37,129 
+Instruction at 2c: 00000000110001011110100100110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:35:40,875 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/teste1 2 e 3/teste1.txt
+2023-04-27 15:35:40,886 Loaded 12 instructions
+2023-04-27 15:35:40,887 
+Instruction at 00: 00000000001100000000001010010011
+-----Control signals-----
+Instruction Type: 0010011 | ADDI 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: False 
+ALU Src: False 
+Reg Write: False
+
+2023-04-27 15:35:40,887 
+Instruction at 04: 00000000101000000000001100010011
+-----Control signals-----
+Instruction Type: 0010011 | ADDI 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: False 
+ALU Src: False 
+Reg Write: False
+
+2023-04-27 15:35:40,887 
+Instruction at 08: 00000001010000000000010100010011
+-----Control signals-----
+Instruction Type: 0010011 | ADDI 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: False 
+ALU Src: False 
+Reg Write: False
+
+2023-04-27 15:35:40,887 
+Instruction at 0c: 00000000010101010010000000100011
+-----Control signals-----
+Instruction Type: 0100011 | SW 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: False
+
+2023-04-27 15:35:40,887 
+Instruction at 10: 00000000011001010010001000100011
+-----Control signals-----
+Instruction Type: 0100011 | SW 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: False
+
+2023-04-27 15:35:40,887 
+Instruction at 14: 00000000000001010010010110000011
+-----Control signals-----
+Instruction Type: 0000011 | LW 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:35:40,887 
+Instruction at 18: 00000000010001010010011000000011
+-----Control signals-----
+Instruction Type: 0000011 | LW 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:35:40,887 
+Instruction at 1c: 00000000110001011000011100110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:35:40,887 
+Instruction at 20: 01000000101101100000011110110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:35:40,887 
+Instruction at 24: 01000000110001011000100000110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:35:40,888 
+Instruction at 28: 00000000101101100111100010110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:35:40,888 
+Instruction at 2c: 00000000110001011110100100110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:37:50,906 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/teste1 2 e 3/teste1.txt
+2023-04-27 15:37:50,907 Loaded 12 instructions
+2023-04-27 15:37:50,919 
+Instruction at 00: 00000000001100000000001010010011
+-----Control signals-----
+Instruction Type: 0010011 | ADDI 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: False 
+ALU Src: False 
+Reg Write: False
+
+2023-04-27 15:37:50,920 
+Instruction at 04: 00000000101000000000001100010011
+-----Control signals-----
+Instruction Type: 0010011 | ADDI 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: False 
+ALU Src: False 
+Reg Write: False
+
+2023-04-27 15:37:50,920 
+Instruction at 08: 00000001010000000000010100010011
+-----Control signals-----
+Instruction Type: 0010011 | ADDI 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: False 
+ALU Src: False 
+Reg Write: False
+
+2023-04-27 15:37:50,922 
+Instruction at 0c: 00000000010101010010000000100011
+-----Control signals-----
+Instruction Type: 0100011 | SW 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: False
+
+2023-04-27 15:37:50,926 
+Instruction at 10: 00000000011001010010001000100011
+-----Control signals-----
+Instruction Type: 0100011 | SW 
+Branch: False 
+Mem Read: False 
+Mem to Reg: False 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: False
+
+2023-04-27 15:37:50,931 
+Instruction at 14: 00000000000001010010010110000011
+-----Control signals-----
+Instruction Type: 0000011 | LW 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:37:50,935 
+Instruction at 18: 00000000010001010010011000000011
+-----Control signals-----
+Instruction Type: 0000011 | LW 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:37:50,940 
+Instruction at 1c: 00000000110001011000011100110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:37:50,944 
+Instruction at 20: 01000000101101100000011110110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:37:50,948 
+Instruction at 24: 01000000110001011000100000110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:37:50,952 
+Instruction at 28: 00000000101101100111100010110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 15:37:50,957 
+Instruction at 2c: 00000000110001011110100100110011
+-----Control signals-----
+Instruction Type: 0110011 | ADD 
+Branch: False 
+Mem Read: True 
+Mem to Reg: True 
+ALU Op: True 
+Mem Write: True 
+ALU Src: True 
+Reg Write: True
+
+2023-04-27 16:18:13,500 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/teste1 2 e 3/teste1.txt
+2023-04-27 16:18:13,508 Loaded 12 instructions
+2023-04-27 16:20:19,403 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/teste1 2 e 3/teste1.txt
+2023-04-27 16:20:19,406 Loaded 12 instructions
+2023-04-27 16:20:19,406 
+Instruction at 00: 00000000001100000000001010010011
+-----Control signals-----
+ALU Src: True
+Mem to Reg: False
+Reg Write: True
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op1: True
+ALU Op2: False
+
+2023-04-27 16:20:19,407 
+Instruction at 04: 00000000101000000000001100010011
+-----Control signals-----
+ALU Src: True
+Mem to Reg: False
+Reg Write: True
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op1: True
+ALU Op2: False
+
+2023-04-27 16:20:19,407 
+Instruction at 08: 00000001010000000000010100010011
+-----Control signals-----
+ALU Src: True
+Mem to Reg: False
+Reg Write: True
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op1: True
+ALU Op2: False
+
+2023-04-27 16:20:19,408 
+Instruction at 0c: 00000000010101010010000000100011
+-----Control signals-----
+ALU Src: True
+Mem to Reg: None
+Reg Write: False
+Mem Read: False
+Mem Write: True
+Branch: False
+ALU Op1: False
+ALU Op2: False
+
+2023-04-27 16:20:19,410 
+Instruction at 10: 00000000011001010010001000100011
+-----Control signals-----
+ALU Src: True
+Mem to Reg: None
+Reg Write: False
+Mem Read: False
+Mem Write: True
+Branch: False
+ALU Op1: False
+ALU Op2: False
+
+2023-04-27 16:20:19,412 
+Instruction at 14: 00000000000001010010010110000011
+-----Control signals-----
+ALU Src: True
+Mem to Reg: True
+Reg Write: True
+Mem Read: True
+Mem Write: False
+Branch: False
+ALU Op1: False
+ALU Op2: False
+
+2023-04-27 16:20:19,414 
+Instruction at 18: 00000000010001010010011000000011
+-----Control signals-----
+ALU Src: True
+Mem to Reg: True
+Reg Write: True
+Mem Read: True
+Mem Write: False
+Branch: False
+ALU Op1: False
+ALU Op2: False
+
+2023-04-27 16:20:19,417 
+Instruction at 1c: 00000000110001011000011100110011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: True
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op1: True
+ALU Op2: False
+
+2023-04-27 16:20:19,419 
+Instruction at 20: 01000000101101100000011110110011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: True
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op1: True
+ALU Op2: False
+
+2023-04-27 16:20:19,420 
+Instruction at 24: 01000000110001011000100000110011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: True
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op1: True
+ALU Op2: False
+
+2023-04-27 16:20:19,422 
+Instruction at 28: 00000000101101100111100010110011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: True
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op1: True
+ALU Op2: False
+
+2023-04-27 16:20:19,424 
+Instruction at 2c: 00000000110001011110100100110011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: True
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op1: True
+ALU Op2: False
+

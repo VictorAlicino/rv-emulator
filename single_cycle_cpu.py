@@ -54,13 +54,13 @@ class RiscV:
 
         logging.debug(f'\nInstruction at {addr}: {instruction}\n'
                       f'-----Control signals-----\n'
-                      f'Instruction Type: {self._control.last_instruction} \n'
-                      f'Branch: {self._control.branch} \n'
-                      f'Mem Read: {self._control.mem_read} \n'
-                      f'Mem to Reg: {self._control.mem_to_reg} \n'
-                      f'ALU Op: {self._control.alu_op} \n'
-                      f'Mem Write: {self._control.mem_write} \n'
-                      f'ALU Src: {self._control.alu_src} \n'
-                      f'Reg Write: {self._control.reg_write}\n')
+                      f'ALU Src: {self._control.alu_src}\n'
+                      f'Mem to Reg: {self._control.mem_to_reg}\n'
+                      f'Reg Write: {self._control.reg_write}\n'
+                      f'Mem Read: {self._control.mem_read}\n'
+                      f'Mem Write: {self._control.mem_write}\n'
+                      f'Branch: {self._control.branch}\n'
+                      f'ALU Op1: {self._control.alu_op1}\n'
+                      f'ALU Op2: {self._control.alu_op2}\n')
         self._program_counter += 4
         return True
