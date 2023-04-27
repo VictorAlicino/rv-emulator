@@ -3440,9 +3440,15 @@ Mem Write: True
 ALU Src: True 
 Reg Write: True
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,109 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/teste1 2 e 3/teste1.txt
 2023-04-27 11:53:37,116 Loaded 12 instructions
 2023-04-27 11:53:37,116 
+=======
+2023-04-25 19:01:05,255 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/teste1 2 e 3/teste1.txt
+2023-04-25 19:01:05,257 Loaded 12 instructions
+2023-04-25 19:01:05,258 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 00: 00000000001100000000001010010011
 -----Control signals-----
 Instruction Type: 0010011 | ADDI 
@@ -3454,7 +3460,11 @@ Mem Write: False
 ALU Src: False 
 Reg Write: False
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,116 
+=======
+2023-04-25 19:01:05,258 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 04: 00000000101000000000001100010011
 -----Control signals-----
 Instruction Type: 0010011 | ADDI 
@@ -3466,7 +3476,11 @@ Mem Write: False
 ALU Src: False 
 Reg Write: False
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,116 
+=======
+2023-04-25 19:01:05,258 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 08: 00000001010000000000010100010011
 -----Control signals-----
 Instruction Type: 0010011 | ADDI 
@@ -3478,7 +3492,11 @@ Mem Write: False
 ALU Src: False 
 Reg Write: False
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,117 
+=======
+2023-04-25 19:01:05,260 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 0c: 00000000010101010010000000100011
 -----Control signals-----
 Instruction Type: 0100011 | SW 
@@ -3490,7 +3508,11 @@ Mem Write: True
 ALU Src: True 
 Reg Write: False
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,119 
+=======
+2023-04-25 19:01:05,262 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 10: 00000000011001010010001000100011
 -----Control signals-----
 Instruction Type: 0100011 | SW 
@@ -3502,7 +3524,11 @@ Mem Write: True
 ALU Src: True 
 Reg Write: False
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,121 
+=======
+2023-04-25 19:01:05,264 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 14: 00000000000001010010010110000011
 -----Control signals-----
 Instruction Type: 0000011 | LW 
@@ -3514,7 +3540,11 @@ Mem Write: True
 ALU Src: True 
 Reg Write: True
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,122 
+=======
+2023-04-25 19:01:05,266 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 18: 00000000010001010010011000000011
 -----Control signals-----
 Instruction Type: 0000011 | LW 
@@ -3526,7 +3556,11 @@ Mem Write: True
 ALU Src: True 
 Reg Write: True
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,123 
+=======
+2023-04-25 19:01:05,268 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 1c: 00000000110001011000011100110011
 -----Control signals-----
 Instruction Type: 0110011 | ADD 
@@ -3538,7 +3572,11 @@ Mem Write: True
 ALU Src: True 
 Reg Write: True
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,125 
+=======
+2023-04-25 19:01:05,270 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 20: 01000000101101100000011110110011
 -----Control signals-----
 Instruction Type: 0110011 | ADD 
@@ -3550,7 +3588,11 @@ Mem Write: True
 ALU Src: True 
 Reg Write: True
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,126 
+=======
+2023-04-25 19:01:05,273 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 24: 01000000110001011000100000110011
 -----Control signals-----
 Instruction Type: 0110011 | ADD 
@@ -3562,7 +3604,11 @@ Mem Write: True
 ALU Src: True 
 Reg Write: True
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,127 
+=======
+2023-04-25 19:01:05,276 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 28: 00000000101101100111100010110011
 -----Control signals-----
 Instruction Type: 0110011 | ADD 
@@ -3574,7 +3620,11 @@ Mem Write: True
 ALU Src: True 
 Reg Write: True
 
+<<<<<<< HEAD
 2023-04-27 11:53:37,129 
+=======
+2023-04-25 19:01:05,279 
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
 Instruction at 2c: 00000000110001011110100100110011
 -----Control signals-----
 Instruction Type: 0110011 | ADD 
@@ -3586,6 +3636,7 @@ Mem Write: True
 ALU Src: True 
 Reg Write: True
 
+<<<<<<< HEAD
 2023-04-27 15:35:40,875 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/teste1 2 e 3/teste1.txt
 2023-04-27 15:35:40,886 Loaded 12 instructions
 2023-04-27 15:35:40,887 
@@ -4026,3 +4077,5 @@ Branch: False
 ALU Op1: True
 ALU Op2: False
 
+=======
+>>>>>>> 6c87f7281c38c7e0b049db7d697ae3a8d09e0b9b
