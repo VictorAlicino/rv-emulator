@@ -1,8 +1,10 @@
+"""This is a simple RISC-V Single Cycle CPU simulator."""
+
+import sys
+import logging
 import tkinter as tk
 from tkinter import filedialog
 from single_cycle_cpu import RiscV
-import logging
-import sys
 
 
 def _main() -> int:
@@ -42,4 +44,4 @@ def _main() -> int:
 
 
 if __name__ == "__main__":
-    exit(_main())
+    sys.exit(_main())
