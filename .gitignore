@@ -1,3 +1,5 @@
 bootmnt/
 build/
 kernel8.img
+.idea/
+__pycache__/

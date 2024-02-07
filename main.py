@@ -6,8 +6,13 @@ import tkinter as tk
 from tkinter import filedialog
 from single_cycle_cpu import RiscV
 
+from rv_units.register_bank import RegisterBank
+
 
 def _main() -> int:
+    """Main function"""
+    root = tk.Tk()
+    root.withdraw()
     if len(sys.argv) > 1:
         if sys.argv[1] == '--debug':
             logging.basicConfig(encoding='utf-8', level=logging.DEBUG,
@@ -27,14 +32,16 @@ def _main() -> int:
                             )
 
     risc_v = RiscV()
-    root = tk.Tk()
-    root.withdraw()
-    file_path = filedialog.askopenfilename()
+    file_path = filedialog.askopenfilename() # Won't work with TUI
+
+    rb = RegisterBank() 
+    print(rb.x0)
+    print(rb.x1)
 
     try:
-        risc_v.load_memory(file_path)
+        risc_v.load_program(file_path)
     except ValueError as e:
-        print(e)
+        print(f'Failed to load program: {e}')
         return 1
 
     while risc_v.cycle():

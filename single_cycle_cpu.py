@@ -1,27 +1,35 @@
-from control_unit import ControlUnit
-import control_unit
+"""Implementation of a Risc-V Single Cycle CPU simulator."""
+
 import logging
+from rv_units.control_unit import ControlUnit
+from rv_units.register_bank import RegisterBank
 
 
 class RiscV:
+    """This class represents a Risc-V Single Cycle CPU simulator."""
     def __init__(self):
-        # This is a dictionary of instructions
-        self._instruction_memory = {}
-        self._program_counter = 0
+        self._instruction_memory: dict = {} # This is a dictionary of instructions
+        self._program_counter: int = 0
 
-        self._control = ControlUnit()
-        self._register_file = {}
+        self._control: ControlUnit = ControlUnit()
+        self._registers: RegisterBank = RegisterBank()
 
     def pc_value(self):
+        """Returns the current value of the program counter register"""
         return self._program_counter
 
-    def print_memory(self):
-        for line in self._instruction_memory:
+    def dump_memory(self):
+        """Dump the memory to the console"""
+        for line in self._instruction_memory.items():
             print(f'0x{line} {self._instruction_memory[line]}')
 
-    def load_memory(self, file_name):
-        logging.debug(f'Loading memory from {file_name}')
-        with open(file_name) as f:
+    def load_program(self, file_name):
+        """Load the program from a file"""
+        # Test if the file is empty
+        if file_name == '':
+            raise ValueError('Program path was not provided')
+        logging.debug('Loading memory from %s', file_name)
+        with open(file_name, encoding='utf-8') as f:
             temp_last_addr = 0
             for i, line in enumerate(f):
                 if line == "\n":
@@ -32,9 +40,10 @@ class RiscV:
                     temp_last_addr = temp_last_addr + 4
                     addr = format(temp_last_addr, '02x')
                 self._instruction_memory.update({addr: line.rstrip()})
-        logging.debug(f'Loaded {len(self._instruction_memory)} instructions')
+        logging.debug('Loaded %d instructions', len(self._instruction_memory))
 
     def instruction_at_address(self, address: int):
+        """Returns the instruction at the given address"""
         hex_addr = format(address, '02x')
         try:
             return self._instruction_memory[hex_addr]
@@ -42,6 +51,7 @@ class RiscV:
             return None
 
     def cycle(self) -> bool:
+        """This is the main loop of the CPU"""
         addr = format(self._program_counter, '02x')
         try:
             instruction = self._instruction_memory[addr]
