@@ -8,20 +8,19 @@ from rv_units.register_bank import RegisterBank
 class RiscV:
     """This class represents a Risc-V Single Cycle CPU simulator."""
     def __init__(self):
-        self._instruction_memory: dict = {} # This is a dictionary of instructions
-        self._program_counter: int = 0
+        self._prog_mem: dict = {} # This is a dictionary of instructions
 
         self._control: ControlUnit = ControlUnit()
         self._registers: RegisterBank = RegisterBank()
 
-    def pc_value(self):
+    def pc_value(self, to_int: bool = False) -> int:
         """Returns the current value of the program counter register"""
-        return self._program_counter
+        return self._registers.pc.to_int() if to_int else self._registers.pc
 
     def dump_memory(self):
         """Dump the memory to the console"""
-        for line in self._instruction_memory.items():
-            print(f'0x{line} {self._instruction_memory[line]}')
+        for line in self._prog_mem.items():
+            print(f'0x{line} {self._prog_mem[line]}')
 
     def load_program(self, file_name):
         """Load the program from a file"""
@@ -39,14 +38,14 @@ class RiscV:
                 else:
                     temp_last_addr = temp_last_addr + 4
                     addr = format(temp_last_addr, '02x')
-                self._instruction_memory.update({addr: line.rstrip()})
-        logging.debug('Loaded %d instructions', len(self._instruction_memory))
+                self._prog_mem.update({addr: line.rstrip()})
+        logging.debug('Loaded %d instructions', len(self._prog_mem))
 
     def instruction_at_address(self, address: int):
         """Returns the instruction at the given address"""
         hex_addr = format(address, '02x')
         try:
-            return self._instruction_memory[hex_addr]
+            return self._prog_mem[hex_addr]
         except KeyError:
             return None
 
@@ -54,7 +53,7 @@ class RiscV:
         """This is the main loop of the CPU"""
         addr = format(self._program_counter, '02x')
         try:
-            instruction = self._instruction_memory[addr]
+            instruction = self._prog_mem[addr]
         except KeyError:
             return False
 
