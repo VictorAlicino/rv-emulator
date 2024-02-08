@@ -6,8 +6,6 @@ import tkinter as tk
 from tkinter import filedialog
 from single_cycle_cpu import RiscV
 
-from rv_units.register_bank import RegisterBank
-
 
 def _main() -> int:
     """Main function"""
@@ -33,10 +31,6 @@ def _main() -> int:
 
     risc_v = RiscV()
     file_path = filedialog.askopenfilename() # Won't work with TUI
-
-    rb = RegisterBank() 
-    print(rb.x0)
-    print(rb.x1)
 
     try:
         risc_v.load_program(file_path)

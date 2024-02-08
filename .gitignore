@@ -3,3 +3,5 @@ build/
 kernel8.img
 .idea/
 __pycache__/
+data_memory.bin
+debug.log

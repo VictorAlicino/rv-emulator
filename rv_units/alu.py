@@ -1,5 +1,6 @@
 """This module contains the ALU class and the ALUOp enumeration"""
 from enum import Enum
+from dataclasses import dataclass
 from rv_units.register_bank import DataRegister
 
 class ALUOp(Enum):
@@ -13,6 +14,12 @@ class ALUOp(Enum):
     SLL = 6
     SRL = 7
     SRA = 8
+
+@dataclass
+class ALUmux:
+    """This is the second operator MUX of the ALU"""
+    a: DataRegister
+    b: int
 
 class ALU:
     """This is the ALU of the CPU"""

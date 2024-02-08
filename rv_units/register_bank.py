@@ -8,23 +8,26 @@ class DataRegister():
     """Structure to represent a Register"""
     data: bytearray(4) # 32 bits
 
-    def write(self, value: (bytearray)):
+    def write(self, value: (bytearray)) -> None:
         """Write data to a byte"""
         self.data = value
+
+    def write_int(self, value: int) -> None:
+        """Write an integer to the register"""
+        self.data = value.to_bytes(4, byteorder='big')
 
     # To String
     def __str__(self):
         # Printing all the bits
         return ''.join(format(x, '08b') for x in self.data)
 
-    def to_int(self):
+    def to_int(self) -> int:
         """Convert the byte array to an integer"""
         return int.from_bytes(self.data, byteorder='big')
 
-    def wipe(self):
+    def wipe(self) -> None:
         """Set all bits to 0"""
         self.data = (0 for _ in range(4))
-
 
 
 class RegisterBank():
