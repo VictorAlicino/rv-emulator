@@ -15,8 +15,7 @@ class ControlUnit:
     def set_control_signals(self, signals: dict):
         """Set the control signals from a dictionary of values"""
         for signal, value in signals.items():
-                setattr(self, signal, value)
-                setattr(self, signal, value)
+            setattr(self, signal, value)
 
     def __str__(self):
         return (
