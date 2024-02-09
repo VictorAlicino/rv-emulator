@@ -19774,3 +19774,31 @@ ALU Op2: False
 2024-02-08 15:21:21,924 Loaded 12 instructions
 2024-02-08 15:21:21,926 Instruction not found at address 0x30
 2024-02-08 15:21:21,927 Halting...
+2024-02-09 09:41:15,219 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-09 09:41:15,225 Loaded 12 instructions
+2024-02-09 09:41:15,227 Instruction not found at address 0x30
+2024-02-09 09:41:15,227 Halting...
+2024-02-09 10:00:29,579 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-09 10:00:29,582 Loaded 12 instructions
+2024-02-09 10:02:27,327 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-09 10:02:27,328 Loaded 12 instructions
+2024-02-09 10:03:32,469 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-09 10:03:32,470 Loaded 12 instructions
+2024-02-09 10:03:32,472 Instruction not found at address 0x30
+2024-02-09 10:03:32,472 Halting...
+2024-02-09 13:56:30,769 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-09 13:56:30,771 Loaded 12 instructions
+2024-02-09 13:56:30,837 Instruction not found at address 0x30
+2024-02-09 13:56:30,840 Halting...
+2024-02-09 13:57:24,735 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-09 13:57:24,736 Loaded 12 instructions
+2024-02-09 13:57:24,749 Instruction not found at address 0x30
+2024-02-09 13:57:24,749 Halting...
+2024-02-09 13:58:32,190 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-09 13:58:32,191 Loaded 12 instructions
+2024-02-09 13:58:32,224 Instruction not found at address 0x30
+2024-02-09 13:58:32,224 Halting...
+2024-02-09 13:58:55,640 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-09 13:58:55,640 Loaded 12 instructions
+2024-02-09 13:58:55,656 Instruction not found at address 0x30
+2024-02-09 13:58:55,656 Halting...

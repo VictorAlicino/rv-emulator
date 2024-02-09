@@ -72,7 +72,6 @@ class RiscV:
         # which is pointed by the PC, its 32 bits will
         # feed other 4 lines on the data path.
 
-
         try:
             instruction: str = self._prog_mem[format(self.pc_value(), '02x')]
         except KeyError:
@@ -85,10 +84,9 @@ class RiscV:
         # The first 7 bits of the instruction are the opcode
         # which will be used to set the control signals.
 
-        # Sending the bites to the correct data path
-        print(instruction)
-        opcode = instruction[25:32]
-        self._control.set_control_signals(opcode)
+        # Sending the bites to the correct data path\
+        opcode: int = int(instruction[25:32], 2)
+        print(self._control)
         self._registers.pc.write(pc_add)
 
         #logging.debug(
