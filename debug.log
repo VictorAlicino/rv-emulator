@@ -19802,3 +19802,1319 @@ ALU Op2: False
 2024-02-09 13:58:55,640 Loaded 12 instructions
 2024-02-09 13:58:55,656 Instruction not found at address 0x30
 2024-02-09 13:58:55,656 Halting...
+2024-02-14 10:38:35,272 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 10:38:35,276 Loaded 12 instructions
+2024-02-14 10:38:35,282 Instruction not found at address 0x30
+2024-02-14 10:38:35,282 Halting...
+2024-02-14 10:52:03,525 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 10:52:03,525 Loaded 12 instructions
+2024-02-14 10:52:03,532 Instruction not found at address 0x30
+2024-02-14 10:52:03,533 Halting...
+2024-02-14 10:52:41,074 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 10:52:41,074 Loaded 12 instructions
+2024-02-14 10:52:41,074 Instruction not found at address 0x30
+2024-02-14 10:52:41,074 Halting...
+2024-02-14 10:55:16,984 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 10:55:16,984 Loaded 12 instructions
+2024-02-14 10:55:16,984 Instruction not found at address 0x30
+2024-02-14 10:55:16,984 Halting...
+2024-02-14 10:59:16,413 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 10:59:16,413 Loaded 12 instructions
+2024-02-14 10:59:16,414 
+Instruction at 0: 00000000001100000000001010010011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,415 
+Instruction at 4: 00000000101000000000001100010011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,416 
+Instruction at 8: 00000001010000000000010100010011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,417 
+Instruction at 12: 00000000010101010010000000100011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,418 
+Instruction at 16: 00000000011001010010001000100011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,420 
+Instruction at 20: 00000000000001010010010110000011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,422 
+Instruction at 24: 00000000010001010010011000000011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,423 
+Instruction at 28: 00000000110001011000011100110011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,425 
+Instruction at 32: 01000000101101100000011110110011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,426 
+Instruction at 36: 01000000110001011000100000110011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,427 
+Instruction at 40: 00000000101101100111100010110011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,429 
+Instruction at 44: 00000000110001011110100100110011
+-----Control signals-----
+ALU Src: False
+Mem to Reg: False
+Reg Write: False
+Mem Read: False
+Mem Write: False
+Branch: False
+ALU Op: False
+
+2024-02-14 10:59:16,430 Instruction not found at address 0x30
+2024-02-14 10:59:16,430 Halting...
+2024-02-14 11:02:04,795 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 11:02:04,795 Loaded 12 instructions
+2024-02-14 11:02:04,795 
+Instruction at %s
+: 0
+-----Control signals-----
+
+Instruction at 00000000001100000000001010010011: 19
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,797 
+Instruction at %s
+: 4
+-----Control signals-----
+
+Instruction at 00000000101000000000001100010011: 19
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,799 
+Instruction at %s
+: 8
+-----Control signals-----
+
+Instruction at 00000001010000000000010100010011: 19
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,801 
+Instruction at %s
+: 12
+-----Control signals-----
+
+Instruction at 00000000010101010010000000100011: 35
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,802 
+Instruction at %s
+: 16
+-----Control signals-----
+
+Instruction at 00000000011001010010001000100011: 35
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,804 
+Instruction at %s
+: 20
+-----Control signals-----
+
+Instruction at 00000000000001010010010110000011: 3
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,806 
+Instruction at %s
+: 24
+-----Control signals-----
+
+Instruction at 00000000010001010010011000000011: 3
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,807 
+Instruction at %s
+: 28
+-----Control signals-----
+
+Instruction at 00000000110001011000011100110011: 51
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,809 
+Instruction at %s
+: 32
+-----Control signals-----
+
+Instruction at 01000000101101100000011110110011: 51
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,811 
+Instruction at %s
+: 36
+-----Control signals-----
+
+Instruction at 01000000110001011000100000110011: 51
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,814 
+Instruction at %s
+: 40
+-----Control signals-----
+
+Instruction at 00000000101101100111100010110011: 51
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,816 
+Instruction at %s
+: 44
+-----Control signals-----
+
+Instruction at 00000000110001011110100100110011: 51
+-----Control signals-----
+opcode:            |Branch------False
+           |Mem Read----False
+           |Mem to Reg--False
+Control--->|ALU Op------False
+           |Mem Write---False
+           |ALU Src-----False
+           |Reg Write---False
+
+
+2024-02-14 11:02:04,818 Instruction not found at address 0x30
+2024-02-14 11:02:04,818 Halting...
+2024-02-14 11:04:37,143 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 11:04:37,143 Loaded 12 instructions
+2024-02-14 11:04:37,218 Instruction not found at address 0x30
+2024-02-14 11:04:37,218 Halting...
+2024-02-14 11:06:59,446 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 11:06:59,446 Loaded 12 instructions
+2024-02-14 11:06:59,526 Instruction not found at address 0x30
+2024-02-14 11:06:59,526 Halting...
+2024-02-14 13:09:01,922 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 13:09:01,926 Loaded 12 instructions
+2024-02-14 13:09:01,926 
+Instruction at 0: 00000000001100000000001010010011
+-----Control signals-----
+opcode: 19
+
+2024-02-14 13:09:01,927 
+Instruction at 4: 00000000101000000000001100010011
+-----Control signals-----
+opcode: 19
+
+2024-02-14 13:09:01,928 
+Instruction at 8: 00000001010000000000010100010011
+-----Control signals-----
+opcode: 19
+
+2024-02-14 13:09:01,929 
+Instruction at 12: 00000000010101010010000000100011
+-----Control signals-----
+opcode: 35
+
+2024-02-14 13:09:01,930 
+Instruction at 16: 00000000011001010010001000100011
+-----Control signals-----
+opcode: 35
+
+2024-02-14 13:09:01,932 
+Instruction at 20: 00000000000001010010010110000011
+-----Control signals-----
+opcode: 3
+
+2024-02-14 13:09:01,933 
+Instruction at 24: 00000000010001010010011000000011
+-----Control signals-----
+opcode: 3
+
+2024-02-14 13:09:01,934 
+Instruction at 28: 00000000110001011000011100110011
+-----Control signals-----
+opcode: 51
+
+2024-02-14 13:09:01,935 
+Instruction at 32: 01000000101101100000011110110011
+-----Control signals-----
+opcode: 51
+
+2024-02-14 13:09:01,936 
+Instruction at 36: 01000000110001011000100000110011
+-----Control signals-----
+opcode: 51
+
+2024-02-14 13:09:01,937 
+Instruction at 40: 00000000101101100111100010110011
+-----Control signals-----
+opcode: 51
+
+2024-02-14 13:09:01,937 
+Instruction at 44: 00000000110001011110100100110011
+-----Control signals-----
+opcode: 51
+
+2024-02-14 13:09:01,939 Instruction not found at address 0x30
+2024-02-14 13:09:01,940 Halting...
+2024-02-14 13:09:44,046 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 13:09:44,046 Loaded 12 instructions
+2024-02-14 13:09:44,046 
+Instruction at 0: 00000000001100000000001010010011
+-----Control signals-----
+opcode: 19
+
+2024-02-14 13:09:44,047 
+Instruction at 4: 00000000101000000000001100010011
+-----Control signals-----
+opcode: 19
+
+2024-02-14 13:09:44,047 
+Instruction at 8: 00000001010000000000010100010011
+-----Control signals-----
+opcode: 19
+
+2024-02-14 13:09:44,047 
+Instruction at 12: 00000000010101010010000000100011
+-----Control signals-----
+opcode: 35
+
+2024-02-14 13:09:44,047 
+Instruction at 16: 00000000011001010010001000100011
+-----Control signals-----
+opcode: 35
+
+2024-02-14 13:09:44,048 
+Instruction at 20: 00000000000001010010010110000011
+-----Control signals-----
+opcode: 3
+
+2024-02-14 13:09:44,048 
+Instruction at 24: 00000000010001010010011000000011
+-----Control signals-----
+opcode: 3
+
+2024-02-14 13:09:44,049 
+Instruction at 28: 00000000110001011000011100110011
+-----Control signals-----
+opcode: 51
+
+2024-02-14 13:09:44,049 
+Instruction at 32: 01000000101101100000011110110011
+-----Control signals-----
+opcode: 51
+
+2024-02-14 13:09:44,049 
+Instruction at 36: 01000000110001011000100000110011
+-----Control signals-----
+opcode: 51
+
+2024-02-14 13:09:44,050 
+Instruction at 40: 00000000101101100111100010110011
+-----Control signals-----
+opcode: 51
+
+2024-02-14 13:09:44,050 
+Instruction at 44: 00000000110001011110100100110011
+-----Control signals-----
+opcode: 51
+
+2024-02-14 13:09:44,051 Instruction not found at address 0x30
+2024-02-14 13:09:44,052 Halting...
+2024-02-14 14:21:49,469 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 14:21:49,470 Loaded 12 instructions
+2024-02-14 14:21:49,470 
+Instruction at 0: 00000000001100000000001010010011
+opcode: 19
+
+2024-02-14 14:21:49,470 
+Instruction at 4: 00000000101000000000001100010011
+opcode: 19
+
+2024-02-14 14:21:49,471 
+Instruction at 8: 00000001010000000000010100010011
+opcode: 19
+
+2024-02-14 14:21:49,472 
+Instruction at 12: 00000000010101010010000000100011
+opcode: 35
+
+2024-02-14 14:21:49,473 
+Instruction at 16: 00000000011001010010001000100011
+opcode: 35
+
+2024-02-14 14:21:49,474 
+Instruction at 20: 00000000000001010010010110000011
+opcode: 3
+
+2024-02-14 14:21:49,474 
+Instruction at 24: 00000000010001010010011000000011
+opcode: 3
+
+2024-02-14 14:21:49,475 
+Instruction at 28: 00000000110001011000011100110011
+opcode: 51
+
+2024-02-14 14:21:49,476 
+Instruction at 32: 01000000101101100000011110110011
+opcode: 51
+
+2024-02-14 14:21:49,477 
+Instruction at 36: 01000000110001011000100000110011
+opcode: 51
+
+2024-02-14 14:21:49,478 
+Instruction at 40: 00000000101101100111100010110011
+opcode: 51
+
+2024-02-14 14:21:49,479 
+Instruction at 44: 00000000110001011110100100110011
+opcode: 51
+
+2024-02-14 14:21:49,481 Instruction not found at address 0x30
+2024-02-14 14:21:49,481 Halting...
+2024-02-14 14:22:12,359 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 14:22:12,359 Loaded 12 instructions
+2024-02-14 14:22:12,359 
+Instruction at 0: 00000000001100000000001010010011
+opcode: 19
+
+2024-02-14 14:22:12,360 
+Instruction at 4: 00000000101000000000001100010011
+opcode: 19
+
+2024-02-14 14:22:12,360 
+Instruction at 8: 00000001010000000000010100010011
+opcode: 19
+
+2024-02-14 14:22:12,360 
+Instruction at 12: 00000000010101010010000000100011
+opcode: 35
+
+2024-02-14 14:22:12,360 
+Instruction at 16: 00000000011001010010001000100011
+opcode: 35
+
+2024-02-14 14:22:12,360 
+Instruction at 20: 00000000000001010010010110000011
+opcode: 3
+
+2024-02-14 14:22:12,361 
+Instruction at 24: 00000000010001010010011000000011
+opcode: 3
+
+2024-02-14 14:22:12,361 
+Instruction at 28: 00000000110001011000011100110011
+opcode: 51
+
+2024-02-14 14:22:12,362 
+Instruction at 32: 01000000101101100000011110110011
+opcode: 51
+
+2024-02-14 14:22:12,362 
+Instruction at 36: 01000000110001011000100000110011
+opcode: 51
+
+2024-02-14 14:22:12,363 
+Instruction at 40: 00000000101101100111100010110011
+opcode: 51
+
+2024-02-14 14:22:12,363 
+Instruction at 44: 00000000110001011110100100110011
+opcode: 51
+
+2024-02-14 14:22:12,364 Instruction not found at address 0x30
+2024-02-14 14:22:12,364 Halting...
+2024-02-14 14:22:32,655 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 14:22:32,655 Loaded 12 instructions
+2024-02-14 14:22:32,655 
+Instruction at 0: 00000000001100000000001010010011
+opcode: 19
+2024-02-14 14:22:32,656 
+Instruction at 4: 00000000101000000000001100010011
+opcode: 19
+2024-02-14 14:22:32,656 
+Instruction at 8: 00000001010000000000010100010011
+opcode: 19
+2024-02-14 14:22:32,656 
+Instruction at 12: 00000000010101010010000000100011
+opcode: 35
+2024-02-14 14:22:32,656 
+Instruction at 16: 00000000011001010010001000100011
+opcode: 35
+2024-02-14 14:22:32,657 
+Instruction at 20: 00000000000001010010010110000011
+opcode: 3
+2024-02-14 14:22:32,657 
+Instruction at 24: 00000000010001010010011000000011
+opcode: 3
+2024-02-14 14:22:32,657 
+Instruction at 28: 00000000110001011000011100110011
+opcode: 51
+2024-02-14 14:22:32,657 
+Instruction at 32: 01000000101101100000011110110011
+opcode: 51
+2024-02-14 14:22:32,658 
+Instruction at 36: 01000000110001011000100000110011
+opcode: 51
+2024-02-14 14:22:32,658 
+Instruction at 40: 00000000101101100111100010110011
+opcode: 51
+2024-02-14 14:22:32,658 
+Instruction at 44: 00000000110001011110100100110011
+opcode: 51
+2024-02-14 14:22:32,659 Instruction not found at address 0x30
+2024-02-14 14:22:32,659 Halting...
+2024-02-14 14:30:44,406 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 14:30:44,406 Loaded 12 instructions
+2024-02-14 14:30:44,406 
+Instruction at 0: 00000000001100000000001010010011
+opcode: 19
+
+2024-02-14 14:30:44,406 
+Instruction at 4: 00000000101000000000001100010011
+opcode: 19
+
+2024-02-14 14:30:44,406 
+Instruction at 8: 00000001010000000000010100010011
+opcode: 19
+
+2024-02-14 14:30:44,406 
+Instruction at 12: 00000000010101010010000000100011
+opcode: 35
+
+2024-02-14 14:30:44,406 
+Instruction at 16: 00000000011001010010001000100011
+opcode: 35
+
+2024-02-14 14:30:44,406 
+Instruction at 20: 00000000000001010010010110000011
+opcode: 3
+
+2024-02-14 14:30:44,407 
+Instruction at 24: 00000000010001010010011000000011
+opcode: 3
+
+2024-02-14 14:30:44,407 
+Instruction at 28: 00000000110001011000011100110011
+opcode: 51
+
+2024-02-14 14:30:44,407 
+Instruction at 32: 01000000101101100000011110110011
+opcode: 51
+
+2024-02-14 14:30:44,407 
+Instruction at 36: 01000000110001011000100000110011
+opcode: 51
+
+2024-02-14 14:30:44,407 
+Instruction at 40: 00000000101101100111100010110011
+opcode: 51
+
+2024-02-14 14:30:44,407 
+Instruction at 44: 00000000110001011110100100110011
+opcode: 51
+
+2024-02-14 14:30:44,407 Instruction not found at address 0x30
+2024-02-14 14:30:44,407 Halting...
+2024-02-14 14:31:17,687 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 14:31:17,687 Loaded 12 instructions
+2024-02-14 14:31:17,687 
+Instruction at 0: 00000000001100000000001010010011
+opcode: 19
+
+2024-02-14 14:31:17,687 
+Instruction at 4: 00000000101000000000001100010011
+opcode: 19
+
+2024-02-14 14:31:17,688 
+Instruction at 8: 00000001010000000000010100010011
+opcode: 19
+
+2024-02-14 14:31:17,688 
+Instruction at 12: 00000000010101010010000000100011
+opcode: 35
+
+2024-02-14 14:31:17,688 
+Instruction at 16: 00000000011001010010001000100011
+opcode: 35
+
+2024-02-14 14:31:17,688 
+Instruction at 20: 00000000000001010010010110000011
+opcode: 3
+
+2024-02-14 14:31:17,689 
+Instruction at 24: 00000000010001010010011000000011
+opcode: 3
+
+2024-02-14 14:31:17,689 
+Instruction at 28: 00000000110001011000011100110011
+opcode: 51
+
+2024-02-14 14:31:17,689 
+Instruction at 32: 01000000101101100000011110110011
+opcode: 51
+
+2024-02-14 14:31:17,690 
+Instruction at 36: 01000000110001011000100000110011
+opcode: 51
+
+2024-02-14 14:31:17,690 
+Instruction at 40: 00000000101101100111100010110011
+opcode: 51
+
+2024-02-14 14:31:17,690 
+Instruction at 44: 00000000110001011110100100110011
+opcode: 51
+
+2024-02-14 14:31:17,691 Instruction not found at address 0x30
+2024-02-14 14:31:17,691 Halting...
+2024-02-14 14:32:11,202 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 14:32:11,202 Loaded 12 instructions
+2024-02-14 14:32:11,202 Instruction not found at address 0x30
+2024-02-14 14:32:11,203 Halting...
+2024-02-14 14:32:45,812 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 14:32:45,812 Loaded 12 instructions
+2024-02-14 14:32:45,812 
+Instruction at 0: 00000000001100000000001010010011
+
+2024-02-14 14:32:45,813 
+Instruction at 4: 00000000101000000000001100010011
+
+2024-02-14 14:32:45,813 
+Instruction at 8: 00000001010000000000010100010011
+
+2024-02-14 14:32:45,813 
+Instruction at 12: 00000000010101010010000000100011
+
+2024-02-14 14:32:45,813 
+Instruction at 16: 00000000011001010010001000100011
+
+2024-02-14 14:32:45,813 
+Instruction at 20: 00000000000001010010010110000011
+
+2024-02-14 14:32:45,813 
+Instruction at 24: 00000000010001010010011000000011
+
+2024-02-14 14:32:45,813 
+Instruction at 28: 00000000110001011000011100110011
+
+2024-02-14 14:32:45,814 
+Instruction at 32: 01000000101101100000011110110011
+
+2024-02-14 14:32:45,814 
+Instruction at 36: 01000000110001011000100000110011
+
+2024-02-14 14:32:45,814 
+Instruction at 40: 00000000101101100111100010110011
+
+2024-02-14 14:32:45,815 
+Instruction at 44: 00000000110001011110100100110011
+
+2024-02-14 14:32:45,815 Instruction not found at address 0x30
+2024-02-14 14:32:45,815 Halting...
+2024-02-14 14:33:08,578 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 14:33:08,578 Loaded 12 instructions
+2024-02-14 14:33:08,578 
+Instruction at 0: 00000000001100000000001010010011
+
+2024-02-14 14:33:08,579 
+Instruction at 4: 00000000101000000000001100010011
+
+2024-02-14 14:33:08,579 
+Instruction at 8: 00000001010000000000010100010011
+
+2024-02-14 14:33:08,580 
+Instruction at 12: 00000000010101010010000000100011
+
+2024-02-14 14:33:08,581 
+Instruction at 16: 00000000011001010010001000100011
+
+2024-02-14 14:33:08,582 
+Instruction at 20: 00000000000001010010010110000011
+
+2024-02-14 14:33:08,583 
+Instruction at 24: 00000000010001010010011000000011
+
+2024-02-14 14:33:08,583 
+Instruction at 28: 00000000110001011000011100110011
+
+2024-02-14 14:33:08,584 
+Instruction at 32: 01000000101101100000011110110011
+
+2024-02-14 14:33:08,585 
+Instruction at 36: 01000000110001011000100000110011
+
+2024-02-14 14:33:08,586 
+Instruction at 40: 00000000101101100111100010110011
+
+2024-02-14 14:33:08,587 
+Instruction at 44: 00000000110001011110100100110011
+
+2024-02-14 14:33:08,588 Instruction not found at address 0x30
+2024-02-14 14:33:08,588 Halting...
+2024-02-14 16:40:58,093 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 16:40:58,094 Loaded 12 instructions
+2024-02-14 16:40:58,094 
+Instruction at 0: 00000000001100000000001010010011
+
+2024-02-14 16:40:58,094 
+Instruction at 4: 00000000101000000000001100010011
+
+2024-02-14 16:40:58,095 
+Instruction at 8: 00000001010000000000010100010011
+
+2024-02-14 16:40:58,096 
+Instruction at 12: 00000000010101010010000000100011
+
+2024-02-14 16:40:58,097 
+Instruction at 16: 00000000011001010010001000100011
+
+2024-02-14 16:40:58,098 
+Instruction at 20: 00000000000001010010010110000011
+
+2024-02-14 16:40:58,098 
+Instruction at 24: 00000000010001010010011000000011
+
+2024-02-14 16:40:58,099 
+Instruction at 28: 00000000110001011000011100110011
+
+2024-02-14 16:40:58,100 
+Instruction at 32: 01000000101101100000011110110011
+
+2024-02-14 16:40:58,101 
+Instruction at 36: 01000000110001011000100000110011
+
+2024-02-14 16:40:58,102 
+Instruction at 40: 00000000101101100111100010110011
+
+2024-02-14 16:40:58,103 
+Instruction at 44: 00000000110001011110100100110011
+
+2024-02-14 16:40:58,103 Instruction not found at address 0x30
+2024-02-14 16:40:58,104 Halting...
+2024-02-14 16:41:55,390 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 16:41:55,390 Loaded 12 instructions
+2024-02-14 16:41:55,466 Instruction not found at address 0x30
+2024-02-14 16:41:55,466 Halting...
+2024-02-14 16:45:02,281 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 16:45:02,281 Loaded 12 instructions
+2024-02-14 16:45:02,350 Instruction not found at address 0x30
+2024-02-14 16:45:02,350 Halting...
+2024-02-14 16:49:03,687 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 16:49:03,687 Loaded 12 instructions
+2024-02-14 16:49:03,687 
+Instruction at 0: 00000000001100000000001010010011
+    Opcode: 19
+
+2024-02-14 16:49:03,688 
+Instruction at 4: 00000000101000000000001100010011
+    Opcode: 19
+
+2024-02-14 16:49:03,688 
+Instruction at 8: 00000001010000000000010100010011
+    Opcode: 19
+
+2024-02-14 16:49:03,688 
+Instruction at 12: 00000000010101010010000000100011
+    Opcode: 35
+
+2024-02-14 16:49:03,688 
+Instruction at 16: 00000000011001010010001000100011
+    Opcode: 35
+
+2024-02-14 16:49:03,688 
+Instruction at 20: 00000000000001010010010110000011
+    Opcode: 3
+
+2024-02-14 16:49:03,689 
+Instruction at 24: 00000000010001010010011000000011
+    Opcode: 3
+
+2024-02-14 16:49:03,689 
+Instruction at 28: 00000000110001011000011100110011
+    Opcode: 51
+
+2024-02-14 16:49:03,689 
+Instruction at 32: 01000000101101100000011110110011
+    Opcode: 51
+
+2024-02-14 16:49:03,690 
+Instruction at 36: 01000000110001011000100000110011
+    Opcode: 51
+
+2024-02-14 16:49:03,690 
+Instruction at 40: 00000000101101100111100010110011
+    Opcode: 51
+
+2024-02-14 16:49:03,691 
+Instruction at 44: 00000000110001011110100100110011
+    Opcode: 51
+
+2024-02-14 16:49:03,691 Instruction not found at address 0x30
+2024-02-14 16:49:03,691 Halting...
+2024-02-14 16:49:18,593 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 16:49:18,593 Loaded 12 instructions
+2024-02-14 16:49:18,593 
+Instruction at 0: 00000000001100000000001010010011
+Opcode: 19
+
+2024-02-14 16:49:18,594 
+Instruction at 4: 00000000101000000000001100010011
+Opcode: 19
+
+2024-02-14 16:49:18,594 
+Instruction at 8: 00000001010000000000010100010011
+Opcode: 19
+
+2024-02-14 16:49:18,594 
+Instruction at 12: 00000000010101010010000000100011
+Opcode: 35
+
+2024-02-14 16:49:18,594 
+Instruction at 16: 00000000011001010010001000100011
+Opcode: 35
+
+2024-02-14 16:49:18,594 
+Instruction at 20: 00000000000001010010010110000011
+Opcode: 3
+
+2024-02-14 16:49:18,595 
+Instruction at 24: 00000000010001010010011000000011
+Opcode: 3
+
+2024-02-14 16:49:18,595 
+Instruction at 28: 00000000110001011000011100110011
+Opcode: 51
+
+2024-02-14 16:49:18,596 
+Instruction at 32: 01000000101101100000011110110011
+Opcode: 51
+
+2024-02-14 16:49:18,596 
+Instruction at 36: 01000000110001011000100000110011
+Opcode: 51
+
+2024-02-14 16:49:18,596 
+Instruction at 40: 00000000101101100111100010110011
+Opcode: 51
+
+2024-02-14 16:49:18,597 
+Instruction at 44: 00000000110001011110100100110011
+Opcode: 51
+
+2024-02-14 16:49:18,597 Instruction not found at address 0x30
+2024-02-14 16:49:18,597 Halting...
+2024-02-14 16:51:04,827 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 16:51:04,827 Loaded 12 instructions
+2024-02-14 16:51:04,827 
+Instruction at 0: 00000000001100000000001010010011
+Opcode: (19, '0010011')
+
+2024-02-14 16:51:04,828 
+Instruction at 4: 00000000101000000000001100010011
+Opcode: (19, '0010011')
+
+2024-02-14 16:51:04,828 
+Instruction at 8: 00000001010000000000010100010011
+Opcode: (19, '0010011')
+
+2024-02-14 16:51:04,828 
+Instruction at 12: 00000000010101010010000000100011
+Opcode: (35, '0100011')
+
+2024-02-14 16:51:04,828 
+Instruction at 16: 00000000011001010010001000100011
+Opcode: (35, '0100011')
+
+2024-02-14 16:51:04,828 
+Instruction at 20: 00000000000001010010010110000011
+Opcode: (3, '0000011')
+
+2024-02-14 16:51:04,829 
+Instruction at 24: 00000000010001010010011000000011
+Opcode: (3, '0000011')
+
+2024-02-14 16:51:04,830 
+Instruction at 28: 00000000110001011000011100110011
+Opcode: (51, '0110011')
+
+2024-02-14 16:51:04,830 
+Instruction at 32: 01000000101101100000011110110011
+Opcode: (51, '0110011')
+
+2024-02-14 16:51:04,831 
+Instruction at 36: 01000000110001011000100000110011
+Opcode: (51, '0110011')
+
+2024-02-14 16:51:04,831 
+Instruction at 40: 00000000101101100111100010110011
+Opcode: (51, '0110011')
+
+2024-02-14 16:51:04,832 
+Instruction at 44: 00000000110001011110100100110011
+Opcode: (51, '0110011')
+
+2024-02-14 16:51:04,832 Instruction not found at address 0x30
+2024-02-14 16:51:04,832 Halting...
+2024-02-14 17:03:26,140 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 17:03:26,140 Loaded 12 instructions
+2024-02-14 17:03:26,140 Instruction at 0: 00000000001100000000001010010011
+
+2024-02-14 17:03:26,141 [Control Unit] Received opcode: 19
+2024-02-14 17:03:26,141 Instruction at 4: 00000000101000000000001100010011
+
+2024-02-14 17:03:26,141 [Control Unit] Received opcode: 19
+2024-02-14 17:03:26,141 Instruction at 8: 00000001010000000000010100010011
+
+2024-02-14 17:03:26,141 [Control Unit] Received opcode: 19
+2024-02-14 17:03:26,141 Instruction at 12: 00000000010101010010000000100011
+
+2024-02-14 17:03:26,141 [Control Unit] Received opcode: 35
+2024-02-14 17:03:26,142 Instruction at 16: 00000000011001010010001000100011
+
+2024-02-14 17:03:26,142 [Control Unit] Received opcode: 35
+2024-02-14 17:03:26,142 Instruction at 20: 00000000000001010010010110000011
+
+2024-02-14 17:03:26,142 [Control Unit] Received opcode: 3
+2024-02-14 17:03:26,142 Instruction at 24: 00000000010001010010011000000011
+
+2024-02-14 17:03:26,142 [Control Unit] Received opcode: 3
+2024-02-14 17:03:26,143 Instruction at 28: 00000000110001011000011100110011
+
+2024-02-14 17:03:26,143 [Control Unit] Received opcode: 51
+2024-02-14 17:03:26,143 Instruction at 32: 01000000101101100000011110110011
+
+2024-02-14 17:03:26,143 [Control Unit] Received opcode: 51
+2024-02-14 17:03:26,143 Instruction at 36: 01000000110001011000100000110011
+
+2024-02-14 17:03:26,144 [Control Unit] Received opcode: 51
+2024-02-14 17:03:26,144 Instruction at 40: 00000000101101100111100010110011
+
+2024-02-14 17:03:26,144 [Control Unit] Received opcode: 51
+2024-02-14 17:03:26,144 Instruction at 44: 00000000110001011110100100110011
+
+2024-02-14 17:03:26,144 [Control Unit] Received opcode: 51
+2024-02-14 17:03:26,145 Instruction not found at address 0x30
+2024-02-14 17:03:26,145 Halting...
+2024-02-14 17:04:49,515 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 17:04:49,515 Loaded 12 instructions
+2024-02-14 17:04:49,516 Instruction at 0: 00000000001100000000001010010011
+2024-02-14 17:04:49,516 [Control Unit] Received opcode: 19
+2024-02-14 17:04:49,516 
+
+2024-02-14 17:04:49,516 Instruction at 4: 00000000101000000000001100010011
+2024-02-14 17:04:49,516 [Control Unit] Received opcode: 19
+2024-02-14 17:04:49,516 
+
+2024-02-14 17:04:49,516 Instruction at 8: 00000001010000000000010100010011
+2024-02-14 17:04:49,516 [Control Unit] Received opcode: 19
+2024-02-14 17:04:49,516 
+
+2024-02-14 17:04:49,516 Instruction at 12: 00000000010101010010000000100011
+2024-02-14 17:04:49,516 [Control Unit] Received opcode: 35
+2024-02-14 17:04:49,517 
+
+2024-02-14 17:04:49,517 Instruction at 16: 00000000011001010010001000100011
+2024-02-14 17:04:49,517 [Control Unit] Received opcode: 35
+2024-02-14 17:04:49,517 
+
+2024-02-14 17:04:49,517 Instruction at 20: 00000000000001010010010110000011
+2024-02-14 17:04:49,517 [Control Unit] Received opcode: 3
+2024-02-14 17:04:49,518 
+
+2024-02-14 17:04:49,518 Instruction at 24: 00000000010001010010011000000011
+2024-02-14 17:04:49,518 [Control Unit] Received opcode: 3
+2024-02-14 17:04:49,518 
+
+2024-02-14 17:04:49,518 Instruction at 28: 00000000110001011000011100110011
+2024-02-14 17:04:49,519 [Control Unit] Received opcode: 51
+2024-02-14 17:04:49,519 
+
+2024-02-14 17:04:49,519 Instruction at 32: 01000000101101100000011110110011
+2024-02-14 17:04:49,519 [Control Unit] Received opcode: 51
+2024-02-14 17:04:49,519 
+
+2024-02-14 17:04:49,520 Instruction at 36: 01000000110001011000100000110011
+2024-02-14 17:04:49,520 [Control Unit] Received opcode: 51
+2024-02-14 17:04:49,520 
+
+2024-02-14 17:04:49,520 Instruction at 40: 00000000101101100111100010110011
+2024-02-14 17:04:49,520 [Control Unit] Received opcode: 51
+2024-02-14 17:04:49,520 
+
+2024-02-14 17:04:49,521 Instruction at 44: 00000000110001011110100100110011
+2024-02-14 17:04:49,521 [Control Unit] Received opcode: 51
+2024-02-14 17:04:49,521 
+
+2024-02-14 17:04:49,521 Instruction not found at address 0x30
+2024-02-14 17:04:49,521 Halting...
+
+2024-02-14 17:05:31,796 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 17:05:31,796 Loaded 12 instructions
+2024-02-14 17:05:31,797 Instruction at 0: 00000000001100000000001010010011
+2024-02-14 17:05:31,797 [Control Unit] Received opcode: 19
+2024-02-14 17:05:31,797 Instruction at 4: 00000000101000000000001100010011
+2024-02-14 17:05:31,797 [Control Unit] Received opcode: 19
+2024-02-14 17:05:31,797 Instruction at 8: 00000001010000000000010100010011
+2024-02-14 17:05:31,797 [Control Unit] Received opcode: 19
+2024-02-14 17:05:31,797 Instruction at 12: 00000000010101010010000000100011
+2024-02-14 17:05:31,797 [Control Unit] Received opcode: 35
+2024-02-14 17:05:31,797 Instruction at 16: 00000000011001010010001000100011
+2024-02-14 17:05:31,797 [Control Unit] Received opcode: 35
+2024-02-14 17:05:31,797 Instruction at 20: 00000000000001010010010110000011
+2024-02-14 17:05:31,797 [Control Unit] Received opcode: 3
+2024-02-14 17:05:31,798 Instruction at 24: 00000000010001010010011000000011
+2024-02-14 17:05:31,798 [Control Unit] Received opcode: 3
+2024-02-14 17:05:31,798 Instruction at 28: 00000000110001011000011100110011
+2024-02-14 17:05:31,798 [Control Unit] Received opcode: 51
+2024-02-14 17:05:31,798 Instruction at 32: 01000000101101100000011110110011
+2024-02-14 17:05:31,798 [Control Unit] Received opcode: 51
+2024-02-14 17:05:31,799 Instruction at 36: 01000000110001011000100000110011
+2024-02-14 17:05:31,799 [Control Unit] Received opcode: 51
+2024-02-14 17:05:31,799 Instruction at 40: 00000000101101100111100010110011
+2024-02-14 17:05:31,799 [Control Unit] Received opcode: 51
+2024-02-14 17:05:31,799 Instruction at 44: 00000000110001011110100100110011
+2024-02-14 17:05:31,800 [Control Unit] Received opcode: 51
+2024-02-14 17:05:31,800 Instruction not found at address 0x30
+2024-02-14 17:05:31,800 Halting...
+
+2024-02-14 17:06:24,156 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 17:06:24,156 Loaded 12 instructions
+2024-02-14 17:06:24,156 [CPU] Instruction at 0: 00000000001100000000001010010011
+2024-02-14 17:06:24,156 [Control Unit] Received opcode: 19
+2024-02-14 17:06:24,157 [CPU] Instruction at 4: 00000000101000000000001100010011
+2024-02-14 17:06:24,157 [Control Unit] Received opcode: 19
+2024-02-14 17:06:24,157 [CPU] Instruction at 8: 00000001010000000000010100010011
+2024-02-14 17:06:24,157 [Control Unit] Received opcode: 19
+2024-02-14 17:06:24,157 [CPU] Instruction at 12: 00000000010101010010000000100011
+2024-02-14 17:06:24,157 [Control Unit] Received opcode: 35
+2024-02-14 17:06:24,157 [CPU] Instruction at 16: 00000000011001010010001000100011
+2024-02-14 17:06:24,157 [Control Unit] Received opcode: 35
+2024-02-14 17:06:24,157 [CPU] Instruction at 20: 00000000000001010010010110000011
+2024-02-14 17:06:24,157 [Control Unit] Received opcode: 3
+2024-02-14 17:06:24,157 [CPU] Instruction at 24: 00000000010001010010011000000011
+2024-02-14 17:06:24,157 [Control Unit] Received opcode: 3
+2024-02-14 17:06:24,158 [CPU] Instruction at 28: 00000000110001011000011100110011
+2024-02-14 17:06:24,158 [Control Unit] Received opcode: 51
+2024-02-14 17:06:24,158 [CPU] Instruction at 32: 01000000101101100000011110110011
+2024-02-14 17:06:24,158 [Control Unit] Received opcode: 51
+2024-02-14 17:06:24,158 [CPU] Instruction at 36: 01000000110001011000100000110011
+2024-02-14 17:06:24,158 [Control Unit] Received opcode: 51
+2024-02-14 17:06:24,158 [CPU] Instruction at 40: 00000000101101100111100010110011
+2024-02-14 17:06:24,159 [Control Unit] Received opcode: 51
+2024-02-14 17:06:24,159 [CPU] Instruction at 44: 00000000110001011110100100110011
+2024-02-14 17:06:24,159 [Control Unit] Received opcode: 51
+2024-02-14 17:06:24,159 [CPU] Instruction not found at address 0x30
+2024-02-14 17:06:24,159 [CPU] Halting...
+
+2024-02-14 17:19:44,375 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 17:19:44,375 Loaded 12 instructions
+2024-02-14 17:19:44,375 [CPU] Instruction at 0: 00000000001100000000001010010011
+2024-02-14 17:19:44,376 [Control Unit] Received opcode: 19
+2024-02-14 17:19:44,376 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,376 [CPU] Instruction at 4: 00000000101000000000001100010011
+2024-02-14 17:19:44,376 [Control Unit] Received opcode: 19
+2024-02-14 17:19:44,376 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,376 [CPU] Instruction at 8: 00000001010000000000010100010011
+2024-02-14 17:19:44,376 [Control Unit] Received opcode: 19
+2024-02-14 17:19:44,376 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,376 [CPU] Instruction at 12: 00000000010101010010000000100011
+2024-02-14 17:19:44,376 [Control Unit] Received opcode: 35
+2024-02-14 17:19:44,376 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,377 [CPU] Instruction at 16: 00000000011001010010001000100011
+2024-02-14 17:19:44,377 [Control Unit] Received opcode: 35
+2024-02-14 17:19:44,377 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,377 [CPU] Instruction at 20: 00000000000001010010010110000011
+2024-02-14 17:19:44,377 [Control Unit] Received opcode: 3
+2024-02-14 17:19:44,377 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,377 [CPU] Instruction at 24: 00000000010001010010011000000011
+2024-02-14 17:19:44,378 [Control Unit] Received opcode: 3
+2024-02-14 17:19:44,378 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,378 [CPU] Instruction at 28: 00000000110001011000011100110011
+2024-02-14 17:19:44,379 [Control Unit] Received opcode: 51
+2024-02-14 17:19:44,379 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,379 [CPU] Instruction at 32: 01000000101101100000011110110011
+2024-02-14 17:19:44,379 [Control Unit] Received opcode: 51
+2024-02-14 17:19:44,379 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,379 [CPU] Instruction at 36: 01000000110001011000100000110011
+2024-02-14 17:19:44,380 [Control Unit] Received opcode: 51
+2024-02-14 17:19:44,380 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,380 [CPU] Instruction at 40: 00000000101101100111100010110011
+2024-02-14 17:19:44,380 [Control Unit] Received opcode: 51
+2024-02-14 17:19:44,380 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,380 [CPU] Instruction at 44: 00000000110001011110100100110011
+2024-02-14 17:19:44,381 [Control Unit] Received opcode: 51
+2024-02-14 17:19:44,381 [Control Unit] Opcode not recognized
+2024-02-14 17:19:44,381 [CPU] Instruction not found at address 0x30
+2024-02-14 17:19:44,381 [CPU] Halting...
+
+2024-02-14 17:21:42,124 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 17:21:42,124 Loaded 12 instructions
+2024-02-14 17:21:42,125 [CPU] Instruction at 0: 00000000001100000000001010010011
+2024-02-14 17:22:02,125 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 17:22:02,125 Loaded 12 instructions
+2024-02-14 17:22:02,125 [CPU] Instruction at 0: 00000000001100000000001010010011
+2024-02-14 17:22:02,125 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-14 17:22:02,126 [Control Unit] Opcode not recognized
+2024-02-14 17:22:02,126 [CPU] Instruction at 4: 00000000101000000000001100010011
+2024-02-14 17:22:02,126 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-14 17:22:02,126 [Control Unit] Opcode not recognized
+2024-02-14 17:22:02,126 [CPU] Instruction at 8: 00000001010000000000010100010011
+2024-02-14 17:22:02,126 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-14 17:22:02,126 [Control Unit] Opcode not recognized
+2024-02-14 17:22:02,126 [CPU] Instruction at 12: 00000000010101010010000000100011
+2024-02-14 17:22:02,126 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-14 17:22:02,126 [Control Unit] STORE WORD instruction detected
+2024-02-14 17:22:02,126 [CPU] Instruction at 16: 00000000011001010010001000100011
+2024-02-14 17:22:02,126 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-14 17:22:02,126 [Control Unit] STORE WORD instruction detected
+2024-02-14 17:22:02,126 [CPU] Instruction at 20: 00000000000001010010010110000011
+2024-02-14 17:22:02,127 [Control Unit] Received opcode: 3 | 0b11
+2024-02-14 17:22:02,127 [Control Unit] LOAD WORD instruction detected
+2024-02-14 17:22:02,127 [CPU] Instruction at 24: 00000000010001010010011000000011
+2024-02-14 17:22:02,127 [Control Unit] Received opcode: 3 | 0b11
+2024-02-14 17:22:02,127 [Control Unit] LOAD WORD instruction detected
+2024-02-14 17:22:02,127 [CPU] Instruction at 28: 00000000110001011000011100110011
+2024-02-14 17:22:02,128 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-14 17:22:02,128 [Control Unit] R-type instruction detected
+2024-02-14 17:22:02,129 [CPU] Instruction at 32: 01000000101101100000011110110011
+2024-02-14 17:22:02,130 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-14 17:22:02,130 [Control Unit] R-type instruction detected
+2024-02-14 17:22:02,131 [CPU] Instruction at 36: 01000000110001011000100000110011
+2024-02-14 17:22:02,131 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-14 17:22:02,131 [Control Unit] R-type instruction detected
+2024-02-14 17:22:02,131 [CPU] Instruction at 40: 00000000101101100111100010110011
+2024-02-14 17:22:02,131 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-14 17:22:02,132 [Control Unit] R-type instruction detected
+2024-02-14 17:22:02,132 [CPU] Instruction at 44: 00000000110001011110100100110011
+2024-02-14 17:22:02,132 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-14 17:22:02,132 [Control Unit] R-type instruction detected
+2024-02-14 17:22:02,133 [CPU] Instruction not found at address 0x30
+2024-02-14 17:22:02,133 [CPU] Halting...
+
+2024-02-14 17:27:46,827 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 17:27:46,827 Loaded 12 instructions
+2024-02-14 17:27:46,828 [CPU] Instruction at 0: 00000000001100000000001010010011
+2024-02-14 17:27:46,828 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-14 17:27:46,828 [Control Unit] Opcode not recognized
+2024-02-14 17:27:46,828 [CPU] Instruction at 4: 00000000101000000000001100010011
+2024-02-14 17:27:46,828 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-14 17:27:46,828 [Control Unit] Opcode not recognized
+2024-02-14 17:27:46,829 [CPU] Instruction at 8: 00000001010000000000010100010011
+2024-02-14 17:27:46,829 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-14 17:27:46,829 [Control Unit] Opcode not recognized
+2024-02-14 17:27:46,830 [CPU] Instruction at 12: 00000000010101010010000000100011
+2024-02-14 17:27:46,830 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-14 17:27:46,830 [Control Unit] STORE WORD instruction detected
+2024-02-14 17:27:46,831 [CPU] Instruction at 16: 00000000011001010010001000100011
+2024-02-14 17:27:46,831 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-14 17:27:46,831 [Control Unit] STORE WORD instruction detected
+2024-02-14 17:27:46,832 [CPU] Instruction at 20: 00000000000001010010010110000011
+2024-02-14 17:27:46,832 [Control Unit] Received opcode: 3 | 0b11
+2024-02-14 17:27:46,832 [Control Unit] LOAD WORD instruction detected
+2024-02-14 17:27:46,833 [CPU] Instruction at 24: 00000000010001010010011000000011
+2024-02-14 17:27:46,833 [Control Unit] Received opcode: 3 | 0b11
+2024-02-14 17:27:46,834 [Control Unit] LOAD WORD instruction detected
+2024-02-14 17:27:46,834 [CPU] Instruction at 28: 00000000110001011000011100110011
+2024-02-14 17:27:46,834 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-14 17:27:46,835 [Control Unit] R-type instruction detected
+2024-02-14 17:27:46,835 [CPU] Instruction at 32: 01000000101101100000011110110011
+2024-02-14 17:27:46,836 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-14 17:27:46,836 [Control Unit] R-type instruction detected
+2024-02-14 17:27:46,837 [CPU] Instruction at 36: 01000000110001011000100000110011
+2024-02-14 17:27:46,837 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-14 17:27:46,837 [Control Unit] R-type instruction detected
+2024-02-14 17:27:46,838 [CPU] Instruction at 40: 00000000101101100111100010110011
+2024-02-14 17:27:46,838 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-14 17:27:46,838 [Control Unit] R-type instruction detected
+2024-02-14 17:27:46,839 [CPU] Instruction at 44: 00000000110001011110100100110011
+2024-02-14 17:27:46,839 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-14 17:27:46,839 [Control Unit] R-type instruction detected
+2024-02-14 17:27:46,840 [CPU] Instruction not found at address 0x30
+2024-02-14 17:27:46,840 [CPU] Halting...
+
+2024-02-14 17:29:04,141 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 17:29:04,141 Loaded 12 instructions
+2024-02-14 17:29:04,141 [CPU] Instruction at 0: 00000000001100000000001010010011
+2024-02-14 17:29:04,141 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-14 17:29:04,142 [Control Unit] Opcode not recognized
+2024-02-14 17:29:21,359 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-14 17:29:21,359 Loaded 12 instructions
+2024-02-14 17:29:21,360 [CPU] Instruction at 0: 00000000001100000000001010010011
+2024-02-14 17:29:21,360 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-14 17:29:21,360 [Control Unit] Opcode not recognized
+2024-02-14 17:29:21,360 [CPU] Instruction at 4: 00000000101000000000001100010011
+2024-02-14 17:29:21,360 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-14 17:29:21,360 [Control Unit] Opcode not recognized
+2024-02-14 17:29:21,361 [CPU] Instruction at 8: 00000001010000000000010100010011
+2024-02-14 17:29:21,361 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-14 17:29:21,361 [Control Unit] Opcode not recognized
+2024-02-14 17:29:21,362 [CPU] Instruction at 12: 00000000010101010010000000100011
+2024-02-14 17:29:21,362 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-14 17:29:21,362 [Control Unit] STORE WORD instruction detected

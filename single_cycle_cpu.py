@@ -66,7 +66,7 @@ class RiscV:
         # another goes to the branch mux;
         # and the last one goes to the instruction memory.
         curr_addr: int = self.pc_value()
-        pc_add: bytearray(4) = (curr_addr + 4).to_bytes(4, byteorder='big')
+        pc_add: bytearray = (curr_addr + 4).to_bytes(4, byteorder='big')
 
         # The output of the instruction memory is the line
         # which is pointed by the PC, its 32 bits will
@@ -75,33 +75,21 @@ class RiscV:
         try:
             instruction: str = self._prog_mem[format(self.pc_value(), '02x')]
         except KeyError:
-            logging.debug('Instruction not found at address %s', hex(curr_addr))
-            logging.debug('Halting...')
+            logging.debug('[CPU] Instruction not found at address %s', hex(curr_addr))
+            logging.debug('[CPU] Halting...\n')
             return False
 
         # -----Instruction Decode-----
 
+        logging.debug('[CPU] Instruction at %s: %s', curr_addr, instruction)
+
         # The first 7 bits of the instruction are the opcode
         # which will be used to set the control signals.
 
-        # Sending the bites to the correct data path\
+        # Decoding the Opcode
         opcode: int = int(instruction[25:32], 2)
-        print(self._control)
-        self._registers.pc.write(pc_add)
+        self._control.set_opcode(opcode)
 
-        #logging.debug(
-        #    '\nInstruction at %s: %s\n'
-        #    '-----Control signals-----\n'
-        #    'ALU Src: %s\n'
-        #    'Mem to Reg: %s\n'
-        #    'Reg Write: %s\n'
-        #    'Mem Read: %s\n'
-        #    'Mem Write: %s\n'
-        #    'Branch: %s\n'
-        #    'ALU Op1: %s\n'
-        #    'ALU Op2: %s\n',
-        #    curr_addr, instruction, self._control.alu_src, self._control.mem_to_reg,
-        #    self._control.reg_write, self._control.mem_read, self._control.mem_write,
-        #    self._control.branch, self._control.alu_op1, self._control.alu_op2
-        #)
+        self._registers.pc.write(pc_add)
+        print(self._control)
         return True
