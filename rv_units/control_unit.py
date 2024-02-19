@@ -47,7 +47,6 @@ class ControlUnit:
             case 0b0100011: #SW
                 self._set_control_signals({
                 'alu_src': True,
-                'mem_to_reg': None,
                 'reg_write': False,
                 'mem_read': False,
                 'mem_write': True,
@@ -58,7 +57,6 @@ class ControlUnit:
             case 0b1100011: # BEQ
                 self._set_control_signals({
                 'alu_src': False,
-                'mem_to_reg': None,
                 'reg_write': False,
                 'mem_read': False,
                 'mem_write': False,
@@ -66,6 +64,27 @@ class ControlUnit:
                 'alu_op': (True, False)
                 })
                 logging.debug('[Control Unit] BRANCH EQUAL instruction detected')
+            case 0b1100011: # BNE
+                self._set_control_signals({
+                'alu_src': False,
+                'reg_write': False,
+                'mem_read': False,
+                'mem_write': False,
+                'branch': True,
+                'alu_op': (False, True)
+                })
+                logging.debug('[Control Unit] BRANCH NOT EQUAL instruction detected')
+            case 0b0010011: # ADDI
+                self._set_control_signals({
+                'alu_src': True,
+                'mem_to_reg': False,
+                'reg_write': True,
+                'mem_read': False,
+                'mem_write': False,
+                'branch': False,
+                'alu_op': (False, False)
+                })
+                logging.debug('[Control Unit] ADD IMMEDIATE instruction detected')  
             case _ : logging.error('[Control Unit] Opcode not recognized')
 
     def __str__(self):

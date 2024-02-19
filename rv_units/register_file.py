@@ -6,13 +6,13 @@ from typing import Final
 @dataclass
 class DataRegister():
     """Structure to represent a Register"""
-    data: bytearray(4) # 32 bits
+    data: bytearray # 32 bits
 
-    def write(self, value: (bytearray)) -> None:
+    def write(self, value: bytearray) -> None:
         """Write data to a byte"""
         self.data = value
 
-    def write_int(self, value: int) -> None:
+    def write_int(self, value: bytearray) -> None:
         """Write an integer to the register"""
         self.data = value.to_bytes(4, byteorder='big')
 
@@ -30,19 +30,19 @@ class DataRegister():
         self.data = (0 for _ in range(4))
 
 
-class RegisterBank():
+class RegisterFile():
     """Structure to represent the Register Bank"""
     def __init__(self):
         self.x0: Final[DataRegister] = DataRegister(0 for _ in range(4)) # Zero Register
-        self.x1: DataRegister = self.x0 # Return Address
-        self.x2: DataRegister = self.x0 # Stack Pointer
-        self.x3: DataRegister = self.x0 # Global Pointer
-        self.x4: DataRegister = self.x0 # Thread Pointer
-        self.x5: DataRegister = self.x0 # Temporary 0
-        self.x6: DataRegister = self.x0 # Temporary 1
-        self.x7: DataRegister = self.x0 # Temporary 2
-        self.x8: DataRegister = self.x0 # Frame Pointer
-        self.x9: DataRegister = self.x0 # Saved Register 1
+        self.x1: DataRegister = self.x0  # Return Address
+        self.x2: DataRegister = self.x0  # Stack Pointer
+        self.x3: DataRegister = self.x0  # Global Pointer
+        self.x4: DataRegister = self.x0  # Thread Pointer
+        self.x5: DataRegister = self.x0  # Temporary 0
+        self.x6: DataRegister = self.x0  # Temporary 1
+        self.x7: DataRegister = self.x0  # Temporary 2
+        self.x8: DataRegister = self.x0  # Frame Pointer
+        self.x9: DataRegister = self.x0  # Saved Register 1
         self.x10: DataRegister = self.x0 # Function Argument 0 / Return Value 0
         self.x11: DataRegister = self.x0 # Function Argument 1 / Return Value 1
         self.x12: DataRegister = self.x0 # Function Argument 2
@@ -65,4 +65,28 @@ class RegisterBank():
         self.x29: DataRegister = self.x0 # Temporary 4
         self.x30: DataRegister = self.x0 # Temporary 5
         self.x31: DataRegister = self.x0 # Temporary 6
-        self.pc: DataRegister = self.x0 # Program Counter
+        self.pc: DataRegister = self.x0  # Program Counter
+
+        self.read_data_1: int = 0
+        self.read_data_2: int = 0
+
+    def zero(self) -> DataRegister:
+        """Return the zero register"""
+        return self.x0
+
+    def get_reg(self, read_data: int) -> DataRegister:
+        """Get the register by its name"""
+        match read_data:
+            case 1: return getattr(self, f'x{self.read_data_1}')
+            case 2: return getattr(self, f'x{self.read_data_2}')
+            case _: raise ValueError('Invalid Read ouput')
+
+    def select_register(self, instruction_reg: str | int, read_data: int) -> None:
+        """Set the value on Read Data 1 or Read Data 2"""
+        if read_data < 1 or read_data > 2:
+            raise ValueError('Invalid Read ouput')
+
+        if isinstance(instruction_reg, str):
+            setattr(self, f'read_data_{read_data}', int(instruction_reg, 2))
+        else:
+            setattr(self, f'read_data_{read_data}', instruction_reg)

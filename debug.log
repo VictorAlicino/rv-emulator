@@ -21118,3 +21118,249 @@ Opcode: (51, '0110011')
 2024-02-14 17:29:21,362 [CPU] Instruction at 12: 00000000010101010010000000100011
 2024-02-14 17:29:21,362 [Control Unit] Received opcode: 35 | 0b100011
 2024-02-14 17:29:21,362 [Control Unit] STORE WORD instruction detected
+2024-02-15 17:07:22,616 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-15 17:07:22,622 Loaded 12 instructions
+2024-02-15 17:07:22,622 [CPU] Instruction at 0: 00000000001100000000001010010011
+2024-02-15 17:07:22,623 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 17:07:22,623 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 17:07:22,623 [CPU] Instruction at 4: 00000000101000000000001100010011
+2024-02-15 17:07:22,623 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 17:07:22,623 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 17:07:22,624 [CPU] Instruction at 8: 00000001010000000000010100010011
+2024-02-15 17:07:22,624 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 17:07:22,624 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 17:07:22,626 [CPU] Instruction at 12: 00000000010101010010000000100011
+2024-02-15 17:07:22,626 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-15 17:07:22,626 [Control Unit] STORE WORD instruction detected
+2024-02-15 17:07:22,628 [CPU] Instruction at 16: 00000000011001010010001000100011
+2024-02-15 17:07:22,628 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-15 17:07:22,628 [Control Unit] STORE WORD instruction detected
+2024-02-15 17:07:22,629 [CPU] Instruction at 20: 00000000000001010010010110000011
+2024-02-15 17:07:22,630 [Control Unit] Received opcode: 3 | 0b11
+2024-02-15 17:07:22,630 [Control Unit] LOAD WORD instruction detected
+2024-02-15 17:07:22,631 [CPU] Instruction at 24: 00000000010001010010011000000011
+2024-02-15 17:07:22,631 [Control Unit] Received opcode: 3 | 0b11
+2024-02-15 17:07:22,632 [Control Unit] LOAD WORD instruction detected
+2024-02-15 17:07:22,634 [CPU] Instruction at 28: 00000000110001011000011100110011
+2024-02-15 17:07:22,634 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 17:07:22,634 [Control Unit] R-type instruction detected
+2024-02-15 17:07:22,635 [CPU] Instruction at 32: 01000000101101100000011110110011
+2024-02-15 17:07:22,636 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 17:07:22,636 [Control Unit] R-type instruction detected
+2024-02-15 17:07:22,637 [CPU] Instruction at 36: 01000000110001011000100000110011
+2024-02-15 17:07:22,638 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 17:07:22,638 [Control Unit] R-type instruction detected
+2024-02-15 17:07:22,640 [CPU] Instruction at 40: 00000000101101100111100010110011
+2024-02-15 17:07:22,641 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 17:07:22,641 [Control Unit] R-type instruction detected
+2024-02-15 17:07:22,643 [CPU] Instruction at 44: 00000000110001011110100100110011
+2024-02-15 17:07:22,643 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 17:07:22,644 [Control Unit] R-type instruction detected
+2024-02-15 17:07:22,645 [CPU] Instruction not found at address 0x30
+2024-02-15 17:07:22,646 [CPU] Halting...
+
+2024-02-15 17:09:01,067 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-15 17:09:01,068 Loaded 12 instructions
+2024-02-15 17:09:01,068 [CPU] Instruction at 0x0: 00000000001100000000001010010011
+2024-02-15 17:09:01,068 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 17:09:01,069 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 17:09:01,069 [CPU] Instruction at 0x4: 00000000101000000000001100010011
+2024-02-15 17:09:01,069 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 17:09:01,069 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 17:09:01,070 [CPU] Instruction at 0x8: 00000001010000000000010100010011
+2024-02-15 17:09:01,070 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 17:09:01,070 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 17:09:01,073 [CPU] Instruction at 0xc: 00000000010101010010000000100011
+2024-02-15 17:09:01,073 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-15 17:09:01,073 [Control Unit] STORE WORD instruction detected
+2024-02-15 17:09:01,074 [CPU] Instruction at 0x10: 00000000011001010010001000100011
+2024-02-15 17:09:01,075 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-15 17:09:01,075 [Control Unit] STORE WORD instruction detected
+2024-02-15 17:09:01,076 [CPU] Instruction at 0x14: 00000000000001010010010110000011
+2024-02-15 17:09:01,077 [Control Unit] Received opcode: 3 | 0b11
+2024-02-15 17:09:01,077 [Control Unit] LOAD WORD instruction detected
+2024-02-15 17:09:01,078 [CPU] Instruction at 0x18: 00000000010001010010011000000011
+2024-02-15 17:09:01,078 [Control Unit] Received opcode: 3 | 0b11
+2024-02-15 17:09:01,079 [Control Unit] LOAD WORD instruction detected
+2024-02-15 17:09:01,080 [CPU] Instruction at 0x1c: 00000000110001011000011100110011
+2024-02-15 17:09:01,080 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 17:09:01,080 [Control Unit] R-type instruction detected
+2024-02-15 17:09:01,082 [CPU] Instruction at 0x20: 01000000101101100000011110110011
+2024-02-15 17:09:01,082 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 17:09:01,082 [Control Unit] R-type instruction detected
+2024-02-15 17:09:01,084 [CPU] Instruction at 0x24: 01000000110001011000100000110011
+2024-02-15 17:09:01,084 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 17:09:01,084 [Control Unit] R-type instruction detected
+2024-02-15 17:09:01,086 [CPU] Instruction at 0x28: 00000000101101100111100010110011
+2024-02-15 17:09:01,086 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 17:09:01,086 [Control Unit] R-type instruction detected
+2024-02-15 17:09:01,088 [CPU] Instruction at 0x2c: 00000000110001011110100100110011
+2024-02-15 17:09:01,088 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 17:09:01,088 [Control Unit] R-type instruction detected
+2024-02-15 17:09:01,089 [CPU] Instruction not found at address 0x30
+2024-02-15 17:09:01,090 [CPU] Halting...
+
+2024-02-15 22:13:01,226 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-15 22:13:01,227 Loaded 12 instructions
+2024-02-15 22:13:01,227 [CPU] Instruction at 0x0: 00000000001100000000001010010011
+2024-02-15 22:13:01,227 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 22:13:01,227 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 22:13:01,228 [CPU] Instruction at 0x4: 00000000101000000000001100010011
+2024-02-15 22:13:01,228 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 22:13:01,228 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 22:13:01,228 [CPU] Instruction at 0x8: 00000001010000000000010100010011
+2024-02-15 22:13:01,228 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 22:13:01,228 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 22:13:01,228 [CPU] Instruction at 0xc: 00000000010101010010000000100011
+2024-02-15 22:13:01,228 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-15 22:13:01,229 [Control Unit] STORE WORD instruction detected
+2024-02-15 22:13:01,229 [CPU] Instruction at 0x10: 00000000011001010010001000100011
+2024-02-15 22:13:01,229 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-15 22:13:01,229 [Control Unit] STORE WORD instruction detected
+2024-02-15 22:13:01,229 [CPU] Instruction at 0x14: 00000000000001010010010110000011
+2024-02-15 22:13:01,229 [Control Unit] Received opcode: 3 | 0b11
+2024-02-15 22:13:01,230 [Control Unit] LOAD WORD instruction detected
+2024-02-15 22:13:01,230 [CPU] Instruction at 0x18: 00000000010001010010011000000011
+2024-02-15 22:13:01,230 [Control Unit] Received opcode: 3 | 0b11
+2024-02-15 22:13:01,230 [Control Unit] LOAD WORD instruction detected
+2024-02-15 22:13:01,230 [CPU] Instruction at 0x1c: 00000000110001011000011100110011
+2024-02-15 22:13:01,230 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 22:13:01,230 [Control Unit] R-type instruction detected
+2024-02-15 22:13:01,231 [CPU] Instruction at 0x20: 01000000101101100000011110110011
+2024-02-15 22:13:01,231 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 22:13:01,232 [Control Unit] R-type instruction detected
+2024-02-15 22:13:01,232 [CPU] Instruction at 0x24: 01000000110001011000100000110011
+2024-02-15 22:13:01,233 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 22:13:01,233 [Control Unit] R-type instruction detected
+2024-02-15 22:13:01,233 [CPU] Instruction at 0x28: 00000000101101100111100010110011
+2024-02-15 22:13:01,234 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 22:13:01,235 [Control Unit] R-type instruction detected
+2024-02-15 22:13:01,235 [CPU] Instruction at 0x2c: 00000000110001011110100100110011
+2024-02-15 22:13:01,235 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 22:13:01,236 [Control Unit] R-type instruction detected
+2024-02-15 22:13:01,236 [CPU] Instruction not found at address 0x30
+2024-02-15 22:13:01,236 [CPU] Halting...
+
+2024-02-15 23:19:19,223 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-15 23:19:19,224 Loaded 12 instructions
+2024-02-15 23:19:19,224 [CPU] Instruction at 0x0: 00000000001100000000001010010011
+2024-02-15 23:19:19,225 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 23:19:19,225 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 23:19:19,225 [CPU] Instruction at 0x4: 00000000101000000000001100010011
+2024-02-15 23:19:19,225 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 23:19:19,225 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 23:19:19,225 [CPU] Instruction at 0x8: 00000001010000000000010100010011
+2024-02-15 23:19:19,225 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-15 23:19:19,226 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-15 23:19:19,226 [CPU] Instruction at 0xc: 00000000010101010010000000100011
+2024-02-15 23:19:19,226 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-15 23:19:19,226 [Control Unit] STORE WORD instruction detected
+2024-02-15 23:19:19,226 [CPU] Instruction at 0x10: 00000000011001010010001000100011
+2024-02-15 23:19:19,227 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-15 23:19:19,227 [Control Unit] STORE WORD instruction detected
+2024-02-15 23:19:19,227 [CPU] Instruction at 0x14: 00000000000001010010010110000011
+2024-02-15 23:19:19,228 [Control Unit] Received opcode: 3 | 0b11
+2024-02-15 23:19:19,228 [Control Unit] LOAD WORD instruction detected
+2024-02-15 23:19:19,228 [CPU] Instruction at 0x18: 00000000010001010010011000000011
+2024-02-15 23:19:19,229 [Control Unit] Received opcode: 3 | 0b11
+2024-02-15 23:19:19,229 [Control Unit] LOAD WORD instruction detected
+2024-02-15 23:19:19,229 [CPU] Instruction at 0x1c: 00000000110001011000011100110011
+2024-02-15 23:19:19,230 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 23:19:19,230 [Control Unit] R-type instruction detected
+2024-02-15 23:19:19,230 [CPU] Instruction at 0x20: 01000000101101100000011110110011
+2024-02-15 23:19:19,231 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 23:19:19,231 [Control Unit] R-type instruction detected
+2024-02-15 23:19:19,231 [CPU] Instruction at 0x24: 01000000110001011000100000110011
+2024-02-15 23:19:19,231 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 23:19:19,232 [Control Unit] R-type instruction detected
+2024-02-15 23:19:19,232 [CPU] Instruction at 0x28: 00000000101101100111100010110011
+2024-02-15 23:19:19,232 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 23:19:19,233 [Control Unit] R-type instruction detected
+2024-02-15 23:19:19,233 [CPU] Instruction at 0x2c: 00000000110001011110100100110011
+2024-02-15 23:19:19,233 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-15 23:19:19,234 [Control Unit] R-type instruction detected
+2024-02-15 23:19:19,234 [CPU] Instruction not found at address 0x30
+2024-02-15 23:19:19,234 [CPU] Halting...
+
+2024-02-19 14:01:02,645 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-19 14:01:02,653 Loaded 12 instructions
+2024-02-19 14:01:02,654 [CPU] Instruction at 0x0: 00000000001100000000001010010011
+2024-02-19 14:01:02,654 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-19 14:01:02,654 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-19 14:01:02,654 [CPU] Instruction at 0x4: 00000000101000000000001100010011
+2024-02-19 14:01:02,654 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-19 14:01:02,654 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-19 14:01:02,654 [CPU] Instruction at 0x8: 00000001010000000000010100010011
+2024-02-19 14:01:02,654 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-19 14:01:02,654 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-19 14:01:02,654 [CPU] Instruction at 0xc: 00000000010101010010000000100011
+2024-02-19 14:01:02,654 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-19 14:01:02,655 [Control Unit] STORE WORD instruction detected
+2024-02-19 14:01:02,655 [CPU] Instruction at 0x10: 00000000011001010010001000100011
+2024-02-19 14:01:02,655 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-19 14:01:02,655 [Control Unit] STORE WORD instruction detected
+2024-02-19 14:01:02,655 [CPU] Instruction at 0x14: 00000000000001010010010110000011
+2024-02-19 14:01:02,655 [Control Unit] Received opcode: 3 | 0b11
+2024-02-19 14:01:02,655 [Control Unit] LOAD WORD instruction detected
+2024-02-19 14:01:02,655 [CPU] Instruction at 0x18: 00000000010001010010011000000011
+2024-02-19 14:01:02,655 [Control Unit] Received opcode: 3 | 0b11
+2024-02-19 14:01:02,655 [Control Unit] LOAD WORD instruction detected
+2024-02-19 14:01:02,655 [CPU] Instruction at 0x1c: 00000000110001011000011100110011
+2024-02-19 14:01:02,655 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-19 14:01:02,656 [Control Unit] R-type instruction detected
+2024-02-19 14:01:02,656 [CPU] Instruction at 0x20: 01000000101101100000011110110011
+2024-02-19 14:01:02,656 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-19 14:01:02,656 [Control Unit] R-type instruction detected
+2024-02-19 14:01:02,656 [CPU] Instruction at 0x24: 01000000110001011000100000110011
+2024-02-19 14:01:02,656 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-19 14:01:02,656 [Control Unit] R-type instruction detected
+2024-02-19 14:01:02,656 [CPU] Instruction at 0x28: 00000000101101100111100010110011
+2024-02-19 14:01:02,656 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-19 14:01:02,656 [Control Unit] R-type instruction detected
+2024-02-19 14:01:02,656 [CPU] Instruction at 0x2c: 00000000110001011110100100110011
+2024-02-19 14:01:02,656 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-19 14:01:02,656 [Control Unit] R-type instruction detected
+2024-02-19 14:01:02,656 [CPU] Instruction not found at address 0x30
+2024-02-19 14:01:02,656 [CPU] Halting...
+
+2024-02-19 14:01:08,410 Loading memory from C:/Users/victo/Documents/GitRepos/rv-emulator/test/teste1.txt
+2024-02-19 14:01:08,411 Loaded 12 instructions
+2024-02-19 14:01:08,411 [CPU] Instruction at 0x0: 00000000001100000000001010010011
+2024-02-19 14:01:08,411 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-19 14:01:08,411 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-19 14:01:08,411 [CPU] Instruction at 0x4: 00000000101000000000001100010011
+2024-02-19 14:01:08,411 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-19 14:01:08,412 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-19 14:01:08,412 [CPU] Instruction at 0x8: 00000001010000000000010100010011
+2024-02-19 14:01:08,412 [Control Unit] Received opcode: 19 | 0b10011
+2024-02-19 14:01:08,412 [Control Unit] ADD IMMEDIATE instruction detected
+2024-02-19 14:01:08,412 [CPU] Instruction at 0xc: 00000000010101010010000000100011
+2024-02-19 14:01:08,412 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-19 14:01:08,412 [Control Unit] STORE WORD instruction detected
+2024-02-19 14:01:08,413 [CPU] Instruction at 0x10: 00000000011001010010001000100011
+2024-02-19 14:01:08,413 [Control Unit] Received opcode: 35 | 0b100011
+2024-02-19 14:01:08,413 [Control Unit] STORE WORD instruction detected
+2024-02-19 14:01:08,413 [CPU] Instruction at 0x14: 00000000000001010010010110000011
+2024-02-19 14:01:08,414 [Control Unit] Received opcode: 3 | 0b11
+2024-02-19 14:01:08,414 [Control Unit] LOAD WORD instruction detected
+2024-02-19 14:01:08,415 [CPU] Instruction at 0x18: 00000000010001010010011000000011
+2024-02-19 14:01:08,415 [Control Unit] Received opcode: 3 | 0b11
+2024-02-19 14:01:08,415 [Control Unit] LOAD WORD instruction detected
+2024-02-19 14:01:08,416 [CPU] Instruction at 0x1c: 00000000110001011000011100110011
+2024-02-19 14:01:08,416 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-19 14:01:08,417 [Control Unit] R-type instruction detected
+2024-02-19 14:01:08,417 [CPU] Instruction at 0x20: 01000000101101100000011110110011
+2024-02-19 14:01:08,417 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-19 14:01:08,418 [Control Unit] R-type instruction detected
+2024-02-19 14:01:08,418 [CPU] Instruction at 0x24: 01000000110001011000100000110011
+2024-02-19 14:01:08,418 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-19 14:01:08,419 [Control Unit] R-type instruction detected
+2024-02-19 14:01:08,419 [CPU] Instruction at 0x28: 00000000101101100111100010110011
+2024-02-19 14:01:08,419 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-19 14:01:08,420 [Control Unit] R-type instruction detected
+2024-02-19 14:01:08,420 [CPU] Instruction at 0x2c: 00000000110001011110100100110011
+2024-02-19 14:01:08,421 [Control Unit] Received opcode: 51 | 0b110011
+2024-02-19 14:01:08,421 [Control Unit] R-type instruction detected
+2024-02-19 14:01:08,421 [CPU] Instruction not found at address 0x30
+2024-02-19 14:01:08,422 [CPU] Halting...
+
