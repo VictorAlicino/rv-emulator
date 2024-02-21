@@ -8,7 +8,7 @@ from rv_units.alu import ALU
 
 class MUX:
     """This class represents a Multiplexer"""
-    def __init__(self, _0 = None, _1 = None, select = False):
+    def __init__(self, _0 = 0, _1 = 0, select = False):
         self._input0: DataRegister | int = _0
         self._input1: DataRegister | int = _1
         self._select: bool = select
@@ -124,7 +124,7 @@ class RiscV:
 
         # The PC+4 line is the next address to be executed.
 
-        pc_add: bytearray = (curr_addr + 4).to_bytes(4, byteorder='big')
+        pc_add: bytearray = (curr_addr + 4).to_bytes(4, byteorder='big') # type: ignore
         self._registers.pc.write(pc_add) # PC+4
 
         # -----Instruction Decode-----
@@ -154,7 +154,7 @@ class RiscV:
         # The next 7 bits are the function code
         #func_code: int = int(instruction[0:7], 2)
 
-        alu_mux: MUX = MUX(self._registers.get_reg(2), imm, self._control.alu_src)
+        alu_mux: MUX = MUX(self._registers.get_reg(2), imm, self._control.alu_src) # type: ignore
 
         # -----Execution-----
 
@@ -163,6 +163,8 @@ class RiscV:
 
         self._alu.set_op_a(self._registers.get_reg(1))
         self._alu.set_op_b(alu_mux.read())
+        self._alu.do_op()
+        print('ALU Result:', self._alu.result())
 
         #print(self._control)
         return True

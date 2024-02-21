@@ -14,7 +14,7 @@ class DataRegister():
 
     def write_int(self, value: bytearray) -> None:
         """Write an integer to the register"""
-        self.data = value.to_bytes(4, byteorder='big')
+        self.data = value.to_bytes(4, byteorder='big') # type: ignore
 
     # To String
     def __str__(self):
@@ -27,13 +27,13 @@ class DataRegister():
 
     def wipe(self) -> None:
         """Set all bits to 0"""
-        self.data = (0 for _ in range(4))
+        self.data = (0 for _ in range(4)) # type: ignore
 
 
 class RegisterFile():
     """Structure to represent the Register Bank"""
     def __init__(self):
-        self.x0: Final[DataRegister] = DataRegister(0 for _ in range(4)) # Zero Register
+        self.x0: Final[DataRegister] = DataRegister(0 for _ in range(4)) # Zero Register (Always 0) # type: ignore
         self.x1: DataRegister = self.x0  # Return Address
         self.x2: DataRegister = self.x0  # Stack Pointer
         self.x3: DataRegister = self.x0  # Global Pointer

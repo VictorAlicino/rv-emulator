@@ -51,7 +51,11 @@ class ALU:
         else:
             self._b = b
 
-    def do_op(self) -> int | float:
+    def result(self) -> int | float:
+        """Return the result of the operation"""
+        return self._result
+
+    def do_op(self) -> None:
         """Perform the operation"""
         if self._op is None:
             raise ValueError('Operation not set')
@@ -95,4 +99,3 @@ class ALU:
                 self._result = self._a % self._b
             case _:
                 raise ValueError('Invalid operation')
-        return 0

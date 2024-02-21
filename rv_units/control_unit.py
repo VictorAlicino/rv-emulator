@@ -84,7 +84,7 @@ class ControlUnit:
                 'branch': False,
                 'alu_op': (False, False)
                 })
-                logging.debug('[Control Unit] ADD IMMEDIATE instruction detected')  
+                logging.debug('[Control Unit] ADD IMMEDIATE instruction detected')
             case _ : logging.error('[Control Unit] Opcode not recognized')
 
     def __str__(self):
