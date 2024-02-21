@@ -4,7 +4,7 @@ import logging
 from typing import IO
 from rv_units.control_unit import ControlUnit
 from rv_units.register_file import RegisterFile, DataRegister
-from rv_units.alu import ALU
+from rv_units.alu import ALU, ADDER
 
 class MUX:
     """This class represents a Multiplexer"""
@@ -40,25 +40,27 @@ class MUX:
 class RiscV:
     """This class represents a Risc-V Single Cycle CPU simulator."""
     def __init__(self):
-        self._prog_mem: dict = {} # This is a dictionary of instructions
+        self._imem: dict = {} # This is a dictionary of instructions
 
-        # Data Memory (RAM) on binary file
-        self._data_mem: IO[bytes] = open('data_memory.bin', 'wb')
+        self._data_mem: IO[bytes] = open('data_memory.bin', 'wb') # Data Memory (Cache) on binary file
 
-        self._control: ControlUnit = ControlUnit()
-        self._registers: RegisterFile = RegisterFile()
-        self._alu: ALU = ALU()
+        self._control: ControlUnit = ControlUnit() # Control Unit
+        self._registers: RegisterFile = RegisterFile() # Register File
+        self._alu: ALU = ALU() # Arithmetic Logic Unit
+
+        self.pc: DataRegister = self._registers.zero()  # Program Counter
+        self.pc_mux: MUX = MUX()  # Program Counter Multiplexer
 
     def __del__(self):
         self._data_mem.close()
 
     def pc_value(self) -> int:
         """Returns the current value of the program counter register"""
-        return self._registers.pc.to_int()
+        return self.pc.to_int()
 
     def dump_memory(self):
         """Dump the memory to the console"""
-        for addr, instruction in self._prog_mem.items():
+        for addr, instruction in self._imem.items():
             print(f'0x{addr} {instruction}')
 
     def load_program(self, file_name):
@@ -77,14 +79,14 @@ class RiscV:
                 else:
                     temp_last_addr = temp_last_addr + 4
                     addr = format(temp_last_addr, '02x')
-                self._prog_mem.update({addr: line.rstrip()})
-        logging.debug('Loaded %d instructions', len(self._prog_mem))
+                self._imem.update({addr: line.rstrip()})
+        logging.debug('Loaded %d instructions', len(self._imem))
 
     def instruction_at_address(self, address: int):
         """Returns the instruction at the given address"""
         hex_addr = format(address, '02x')
         try:
-            return self._prog_mem[hex_addr]
+            return self._imem[hex_addr]
         except KeyError:
             return None
 
@@ -109,14 +111,15 @@ class RiscV:
         # One line goes to PC+4;
         # another goes to the branch mux;
         # and the last one goes to the instruction memory.
-        curr_addr: int = self.pc_value()
+        curr_addr: int = self.pc_mux.read()
+        
 
         # The output of the instruction memory is the line
         # which is pointed by the PC, its 32 bits will
         # feed other 4 lines on the data path.
 
         try:
-            instruction: str = self._prog_mem[format(self.pc_value(), '02x')]
+            instruction: str = self._imem[format(self.pc_value(), '02x')]
         except KeyError:
             logging.debug('[CPU] Instruction not found at address %s', hex(curr_addr))
             logging.debug('[CPU] Halting...\n')

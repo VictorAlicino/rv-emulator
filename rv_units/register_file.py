@@ -12,7 +12,7 @@ class DataRegister():
         """Write data to a byte"""
         self.data = value
 
-    def write_int(self, value: bytearray) -> None:
+    def write_int(self, value: int) -> None:
         """Write an integer to the register"""
         self.data = value.to_bytes(4, byteorder='big') # type: ignore
 
@@ -65,7 +65,6 @@ class RegisterFile():
         self.x29: DataRegister = self.x0 # Temporary 4
         self.x30: DataRegister = self.x0 # Temporary 5
         self.x31: DataRegister = self.x0 # Temporary 6
-        self.pc: DataRegister = self.x0  # Program Counter
 
         self.read_data_1: int = 0
         self.read_data_2: int = 0

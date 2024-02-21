@@ -31,6 +31,18 @@ class ALUmux:
     a: DataRegister
     b: int
 
+class ADDER:
+    """Adder generic class"""
+    def __init__(self):
+        self._a: int = 0
+        self._b: int = 0
+        self._result: int = 0
+
+    @classmethod
+    def do(cls, op_a: int, op_b: int) -> int:
+        """Perform the addition"""
+        return op_a + op_b
+
 class ALU:
     """This is the ALU of the CPU"""
     def __init__(self):
