@@ -39,9 +39,15 @@ class ADDER:
         self._result: int = 0
 
     @classmethod
-    def do(cls, op_a: int, op_b: int) -> int:
+    def do(cls, op_a: int | DataRegister, op_b: int | DataRegister) -> int:
         """Perform the addition"""
-        return op_a + op_b
+        a: int = 0
+        b: int = 0
+        if isinstance(op_a, DataRegister):
+            a = op_a.to_int()
+        if isinstance(op_b, DataRegister):
+            b = op_b.to_int()
+        return a + b
 
 class ALU:
     """This is the ALU of the CPU"""

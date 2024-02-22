@@ -93,12 +93,7 @@ class RiscV:
     @staticmethod
     def imm_gen(imm: str) -> bytearray:
         """This function receives a 12-bit immediate value and sign extends it to 32 bits"""
-        # The immediate value is a 12-bit value, so we need to sign extend it to 32 bits.
-        # The most significant bit of the immediate value is the 12th bit, so we need to
-        # copy it to the 20th, 21st, 22nd, 23rd, 24th, 25th, 26th, 27th, 28th, 29th, 30th
-        # and 31st bits of the 32-bit value.
-        imm = imm.zfill(32)
-        return bytearray.fromhex(imm)
+        return bytearray([int(imm[0])] * 20) + bytearray(imm, 'utf-8')
 
     def cycle(self) -> bool:
         """This is the main loop of the CPU"""
@@ -111,8 +106,8 @@ class RiscV:
         # One line goes to PC+4;
         # another goes to the branch mux;
         # and the last one goes to the instruction memory.
-        curr_addr: int = self.pc_mux.read()
-        
+        curr_addr: int = self.pc_mux.read() # type: ignore
+        pc_add_4 = ADDER.do(curr_addr, 4) # PC + 4
 
         # The output of the instruction memory is the line
         # which is pointed by the PC, its 32 bits will
@@ -125,10 +120,6 @@ class RiscV:
             logging.debug('[CPU] Halting...\n')
             return False
 
-        # The PC+4 line is the next address to be executed.
-
-        pc_add: bytearray = (curr_addr + 4).to_bytes(4, byteorder='big') # type: ignore
-        self._registers.pc.write(pc_add) # PC+4
 
         # -----Instruction Decode-----
 
@@ -141,6 +132,11 @@ class RiscV:
         opcode: int = int(instruction[25:32], 2)
         self._control.set_opcode(opcode)
 
+        # The next 12 bits are the immediate value
+        imm: bytearray = self.imm_gen(instruction)
+
+        # -----Execution-----
+
         # The next 5 bits are the source register 1
         rr_1: int = int(instruction[12:17], 2)
         # The next 5 bits are the source register 2
@@ -151,15 +147,10 @@ class RiscV:
         self._registers.select_register(rr_1, 1)
         self._registers.select_register(rr_2, 2)
 
-        # The next 12 bits are the immediate value
-        imm: bytearray = self.imm_gen(instruction[0:12])
-
         # The next 7 bits are the function code
         #func_code: int = int(instruction[0:7], 2)
 
         alu_mux: MUX = MUX(self._registers.get_reg(2), imm, self._control.alu_src) # type: ignore
-
-        # -----Execution-----
 
         # The ALU receives the source registers, the immediate value and the function code
         # and the control signals to perform the operation.
