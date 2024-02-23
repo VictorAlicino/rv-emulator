@@ -2,6 +2,7 @@
 
 import sys
 import logging
+import time
 import tkinter as tk
 from tkinter import filedialog
 from single_cycle_cpu import RiscV
@@ -38,11 +39,16 @@ def _main() -> int:
         print(f'Failed to load program: {e}')
         return 1
 
+    risc_v.dump_memory()
+
+    start_time = time.time()
     while risc_v.cycle():
         pass
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print(f'Execution time: {execution_time/1000} ms')
 
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(_main())

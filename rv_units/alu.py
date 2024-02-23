@@ -34,19 +34,13 @@ class ALUmux:
 class ADDER:
     """Adder generic class"""
     def __init__(self):
-        self._a: int = 0
-        self._b: int = 0
-        self._result: int = 0
+        pass
 
     @classmethod
     def do(cls, op_a: int | DataRegister, op_b: int | DataRegister) -> int:
         """Perform the addition"""
-        a: int = 0
-        b: int = 0
-        if isinstance(op_a, DataRegister):
-            a = op_a.to_int()
-        if isinstance(op_b, DataRegister):
-            b = op_b.to_int()
+        a: int = int(op_a)
+        b: int = int(op_b)
         return a + b
 
 class ALU:
@@ -60,18 +54,19 @@ class ALU:
 
     def set_op_a(self, operand: DataRegister) -> None:
         """Set the first operand"""
-        self._a = operand.to_int()
+        self._a = int(operand)
 
-    def set_op_b(self, b: int | DataRegister) -> None:
+    def set_op_b(self, operand: int | DataRegister) -> None:
         """Set the second operand"""
-        if isinstance(b, DataRegister):
-            self._b = b.to_int()
-        else:
-            self._b = b
+        self._b = int(operand)
 
-    def result(self) -> int | float:
+    def result(self) -> int:
         """Return the result of the operation"""
         return self._result
+
+    def zero(self) -> bool:
+        """Return the zero flag"""
+        return self._zero
 
     def do_op(self) -> None:
         """Perform the operation"""

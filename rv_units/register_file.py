@@ -1,12 +1,25 @@
 """Registers Bank"""
 
-from dataclasses import dataclass
 from typing import Final
 
-@dataclass
 class DataRegister():
     """Structure to represent a Register"""
-    data: bytearray # 32 bits
+
+    def __init__(self, data: bytearray | int) -> None:
+        if isinstance(data, bytearray):
+            self.data: bytearray = data# 32 bits
+            return
+        self.data = data.to_bytes(4, byteorder='big') # type: ignore
+
+    def __str__(self):
+        # Printing all the bits
+        return ''.join(format(x, '08b') for x in self.data)
+
+    def __int__(self):
+        return int.from_bytes(self.data, byteorder='big')
+
+    def __bytes__(self):
+        return self.data
 
     def write(self, value: bytearray) -> None:
         """Write data to a byte"""
@@ -16,15 +29,6 @@ class DataRegister():
         """Write an integer to the register"""
         self.data = value.to_bytes(4, byteorder='big') # type: ignore
 
-    # To String
-    def __str__(self):
-        # Printing all the bits
-        return ''.join(format(x, '08b') for x in self.data)
-
-    def to_int(self) -> int:
-        """Convert the byte array to an integer"""
-        return int.from_bytes(self.data, byteorder='big')
-
     def wipe(self) -> None:
         """Set all bits to 0"""
         self.data = (0 for _ in range(4)) # type: ignore
@@ -33,7 +37,7 @@ class DataRegister():
 class RegisterFile():
     """Structure to represent the Register Bank"""
     def __init__(self):
-        self.x0: Final[DataRegister] = DataRegister(0 for _ in range(4)) # Zero Register (Always 0) # type: ignore
+        self.x0: Final[DataRegister] = DataRegister(0) # Zero Register (Always 0) # type: ignore
         self.x1: DataRegister = self.x0  # Return Address
         self.x2: DataRegister = self.x0  # Stack Pointer
         self.x3: DataRegister = self.x0  # Global Pointer
@@ -66,8 +70,8 @@ class RegisterFile():
         self.x30: DataRegister = self.x0 # Temporary 5
         self.x31: DataRegister = self.x0 # Temporary 6
 
-        self.read_data_1: int = 0
-        self.read_data_2: int = 0
+        self._read_data_1: int = 0
+        self._read_data_2: int = 0
 
     def zero(self) -> DataRegister:
         """Return the zero register"""
@@ -76,8 +80,8 @@ class RegisterFile():
     def get_reg(self, read_data: int) -> DataRegister:
         """Get the register by its name"""
         match read_data:
-            case 1: return getattr(self, f'x{self.read_data_1}')
-            case 2: return getattr(self, f'x{self.read_data_2}')
+            case 1: return getattr(self, f'x{self._read_data_1}')
+            case 2: return getattr(self, f'x{self._read_data_2}')
             case _: raise ValueError('Invalid Read ouput')
 
     def select_register(self, instruction_reg: str | int, read_data: int) -> None:
@@ -89,3 +93,13 @@ class RegisterFile():
             setattr(self, f'read_data_{read_data}', int(instruction_reg, 2))
         else:
             setattr(self, f'read_data_{read_data}', instruction_reg)
+
+    def read_data(self, read_data: int) -> DataRegister:
+        """Return the selected register"""
+        return getattr(self, f'read_data_{read_data}')
+
+    def write_data(self, write_register: int, value: DataRegister) -> None:
+        """Write data to a register"""
+        if write_register == 0:
+            raise ValueError('Cannot write to x0')
+        getattr(self, f'x{write_register}').write(value.data)
