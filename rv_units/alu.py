@@ -1,5 +1,4 @@
 """This module contains the ALU class and the ALUOp enumeration"""
-from enum import Enum
 from dataclasses import dataclass
 from rv_units.control_unit import ControlUnit
 from rv_units.register_file import DataRegister
