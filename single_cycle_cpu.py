@@ -1,7 +1,6 @@
 """Implementation of a Risc-V Single Cycle CPU simulator."""
 
 import logging
-from typing import IO
 from rv_units.control_unit import ControlUnit
 from rv_units.register_file import RegisterFile, DataRegister
 from rv_units.alu import ALU, ADDER
@@ -42,7 +41,8 @@ class RiscV:
     def __init__(self):
         self._imem: dict = {} # This is a dictionary of instructions
 
-        self._data_mem: IO[bytes] = open('data_memory.bin', 'wb') # Cache Memory on binary file
+        # Cache Memory on binary file
+        self._data_mem = open('data_memory.bin', 'r+b') #type: ignore
 
         self._control: ControlUnit = ControlUnit() # Control Unit
         self._registers: RegisterFile = RegisterFile() # Register File
@@ -191,13 +191,14 @@ class RiscV:
         if self._control.mem_write:
             # Write the data memory using the ALU result as the address
             # Dev Note: DataRegister should just return bytes if asked so
+            self._data_mem.seek(self._alu.result())
             self._data_mem.write(bytes(self._registers.read_data(2)))
             self._data_mem.flush()
 
         elif self._control.mem_read:
             # Read the data memory using the ALU result as the address
             dmem_read_data = DataRegister(
-                bytearray(self._data_mem.read( # TODO: aquela coisa ali em cima não rolou
+                bytearray(self._data_mem.read(
                         self._alu.result()
                     )))
         else:

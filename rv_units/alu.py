@@ -51,6 +51,7 @@ class ALU:
         self._b: int = 0
         self._result: int = 0
         self._zero: bool = False
+        self._control: int = 0b0000
 
     def set_op_a(self, operand: DataRegister) -> None:
         """Set the first operand"""
