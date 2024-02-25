@@ -5,3 +5,4 @@ kernel8.img
 __pycache__/
 data_memory.bin
 debug.log
+*.log
