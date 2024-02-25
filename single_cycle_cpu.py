@@ -204,6 +204,7 @@ class RiscV:
         # TODO: tem que implementar todo esse negócio ainda
 
         # -----Write Back-----
+        # fixme: como q isso ta salvando 6MB na memória com 12 instruções carregadas?
 
         dmem_read_data: DataRegister = self._registers.zero()
 
