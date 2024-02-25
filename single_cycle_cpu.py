@@ -42,7 +42,13 @@ class RiscV:
         self._imem: dict = {} # This is a dictionary of instructions
 
         # Cache Memory on binary file
-        self._data_mem = open('data_memory.bin', 'r+b') #type: ignore
+        # If the file does not exist, it will be created
+        try:
+            self._data_mem = open('data_memory.bin', 'r+b') #type: ignore
+            logging.debug('[Emulator] Data Memory file found')
+        except FileNotFoundError:
+            self._data_mem = open('data_memory.bin', 'w+b')
+            logging.debug('[Emulator] Data Memory file not found, creating a new one')
 
         self._control: ControlUnit = ControlUnit() # Control Unit
         self._registers: RegisterFile = RegisterFile() # Register File
@@ -55,6 +61,7 @@ class RiscV:
         self._pc_sel: MUX = MUX()  # Program Counter Multiplexer
 
     def __del__(self):
+        logging.debug('[Emulator] Closing data memory file')
         self._data_mem.close()
 
     def pc_value(self) -> int:
@@ -63,6 +70,7 @@ class RiscV:
 
     def dump_memory(self):
         """Dump the memory to the console"""
+        logging.debug('[Emulator] Dumping loaded memory to STDIN...')
         for addr, instruction in self._imem.items():
             print(f'0x{addr} {instruction}')
 
@@ -71,7 +79,7 @@ class RiscV:
         # Test if the file is empty
         if file_name == '':
             raise ValueError('Program path was not provided')
-        logging.debug('Loading memory from %s', file_name)
+        logging.debug('[Emulator] Loading memory from %s', file_name)
         with open(file_name, encoding='utf-8') as f:
             temp_last_addr = 0
             for i, line in enumerate(f):
@@ -83,7 +91,7 @@ class RiscV:
                     temp_last_addr = temp_last_addr + 4
                     addr = format(temp_last_addr, '02x')
                 self._imem.update({addr: line.rstrip()})
-        logging.debug('Loaded %d instructions', len(self._imem))
+        logging.debug('[Emulator] Loaded %d instructions', len(self._imem))
 
     def instruction_at_address(self, address: int):
         """Returns the instruction at the given address"""
@@ -98,6 +106,7 @@ class RiscV:
         """This function receives a 12-bit immediate value and sign extends it to 32 bits"""
         temp = int(imm, 2).to_bytes(4, byteorder='big')
         imm32: DataRegister = DataRegister(bytearray.fromhex(temp.hex()))
+        logging.debug('[ImmGen] Immediate 32 value: %s', imm32)
         return imm32
 
     def cycle(self) -> bool:
@@ -116,6 +125,7 @@ class RiscV:
                 curr_addr,
                 4
                 ))
+        logging.debug('[CPU] PC at : %s', hex(curr_addr))
 
         # The output of the instruction memory is the line
         # which is pointed by the PC, its 32 bits will
@@ -139,9 +149,11 @@ class RiscV:
         # Decoding the Opcode
         opcode: int = int(instruction[25:32], 2)
         self._control.set_opcode(opcode)
+        logging.debug('[CPU] Opcode: %s', bin(opcode))
 
         # The next 12 bits are the immediate value
-        imm: DataRegister = self.imm_gen(instruction)
+        logging.debug('[CPU] Immediate value: %s', instruction[0:12])
+        imm: DataRegister = self.imm_gen(instruction[0:12])
 
         # The next 5 bits are the source register 1
         rr_1: int = int(instruction[12:17], 2)
@@ -152,6 +164,8 @@ class RiscV:
 
         self._registers.select_register(rr_1, 1)
         self._registers.select_register(rr_2, 2)
+        logging.debug('[CPU] Read Data 1: %s | Read Data 2: %s',
+                      self._registers.read_data(1), self._registers.read_data(2))
 
         # -----Execution-----
 
@@ -159,6 +173,7 @@ class RiscV:
         # the immediate value and the ALU Control
 
         # Select first ALU operand
+        logging.debug('[CPU] ALU Operand A: %s', self._registers.read_data(1))
         self._alu.set_op_a(self._registers.read_data(1))
 
         # Setting the ALU Multiplexer
@@ -167,12 +182,16 @@ class RiscV:
         self._b_sel.set_select(self._control.alu_src)
 
         # Select second ALU operand
+        logging.debug('[CPU] ALU Operand B: %s', self._b_sel.read())
         self._alu.set_op_b(self._b_sel.read())
 
         # The ALU receives the source registers, the immediate value and the function code
         # and the control signals to perform the operation.
-        #self._alu.do_op()
-        #print('ALU Result:', self._alu.result())
+        logging.debug('[CPU] ALUOp: %s | Funct: %s', self._control.alu_op, int(instruction[0:5], 2))
+        self._alu.alu_control(self._control, int(instruction[0:5], 2))
+
+        self._alu.do_op()
+        logging.debug('[CPU] ALU Result: %s', self._alu.result())
 
         pc_add_offset: DataRegister = DataRegister(
             ADDER.do( # PC + Offset
@@ -193,7 +212,6 @@ class RiscV:
             # Dev Note: DataRegister should just return bytes if asked so
             self._data_mem.seek(self._alu.result())
             self._data_mem.write(bytes(self._registers.read_data(2)))
-            self._data_mem.flush()
 
         elif self._control.mem_read:
             # Read the data memory using the ALU result as the address

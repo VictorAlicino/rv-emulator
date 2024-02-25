@@ -1,29 +1,8 @@
 """This module contains the ALU class and the ALUOp enumeration"""
 from enum import Enum
 from dataclasses import dataclass
+from rv_units.control_unit import ControlUnit
 from rv_units.register_file import DataRegister
-
-class ALUOp(Enum):
-    """Enumeration for the ALU operations"""
-    ADD = 0b0000
-    SUB = 0b0001
-    AND = 0b0010
-    OR = 0b0011
-    XOR = 0b0100
-    SLL = 0b0101
-    SRL = 0b0110
-    SRA = 0b0111
-    SLT = 0b1000
-    SLTU = 0b1001
-    MUL = 0b1010
-    MULH = 0b1011
-    MULHSU = 0b1100
-    MULHU = 0b1101
-    DIV = 0b1110
-    DIVU = 0b1111
-    REM = 0b10000
-    REMU = 0b10001
-
 
 @dataclass
 class ALUmux:
@@ -46,7 +25,6 @@ class ADDER:
 class ALU:
     """This is the ALU of the CPU"""
     def __init__(self):
-        self._op: int = 0
         self._a: int = 0
         self._b: int = 0
         self._result: int = 0
@@ -69,47 +47,46 @@ class ALU:
         """Return the zero flag"""
         return self._zero
 
+    def alu_control(self, control_signal: ControlUnit, funct: int) -> None:
+        """Set the ALU control signal"""
+        if control_signal.alu_op[0] is True:
+            # Branch Equal (BEQ)
+            self._control = 0b0110
+        else:
+            if control_signal.alu_op[1] is True:
+                match funct:
+                    case 0b100000: # ADD
+                        self._control = 0b0010
+                    case 0b100010: # SUB
+                        self._control = 0b0110
+                    case 0b100100: # AND
+                        self._control = 0b0000
+                    case 0b100101: # OR
+                        self._control = 0b0001
+                    case 0b101010: # SLT (Set Less Than)
+                        self._control = 0b0111
+                    case _: # Default
+                        raise ValueError('Invalid function code')
+            else:
+                # Load or Store Word (LW | SW)
+                self._control = 0b0010
+
     def do_op(self) -> None:
         """Perform the operation"""
-        if self._op is None:
+        if self._control is None:
             raise ValueError('Operation not set')
 
-        match self._op:
-            case ALUOp.ADD:
+        match self._control:
+            case 0b0010:
                 self._result = self._a + self._b
-            case ALUOp.SUB:
+            case 0b0110:
                 self._result = self._a - self._b
-            case ALUOp.AND:
+            case 0b0000:
                 self._result = self._a & self._b
-            case ALUOp.OR:
+            case 0b0001:
                 self._result = self._a | self._b
-            case ALUOp.XOR:
-                self._result = self._a ^ self._b
-            case ALUOp.SLL:
-                self._result = self._a << self._b
-            case ALUOp.SRL:
-                self._result = self._a >> self._b
-            case ALUOp.SRA:
-                self._result = self._a >> self._b
-            case ALUOp.SLT:
+            case 0b0111:
                 self._result = int(self._a < self._b)
-            case ALUOp.SLTU:
-                self._result = int(self._a < self._b)
-            case ALUOp.MUL:
-                self._result = self._a * self._b
-            case ALUOp.MULH:
-                self._result = self._a * self._b
-            case ALUOp.MULHSU:
-                self._result = self._a * self._b
-            case ALUOp.MULHU:
-                self._result = self._a * self._b
-            case ALUOp.DIV:
-                self._result = self._a // self._b
-            case ALUOp.DIVU:
-                self._result = self._a // self._b
-            case ALUOp.REM:
-                self._result = self._a % self._b
-            case ALUOp.REMU:
-                self._result = self._a % self._b
             case _:
+                print('ALUControl:', bin(self._control))
                 raise ValueError('Invalid operation')
