@@ -1,5 +1,6 @@
 """This module contains the ALU class and the ALUOp enumeration"""
 from dataclasses import dataclass
+import logging
 from rv_units.control_unit import ControlUnit
 from rv_units.register_file import DataRegister
 
@@ -48,21 +49,24 @@ class ALU:
 
     def alu_control(self, control_signal: ControlUnit, funct: int) -> None:
         """Set the ALU control signal"""
+        logging.debug('[ALU Control] Setting ALU control signal')
+        logging.debug('[ALU Control] ALUOp: %s', control_signal.alu_op)
+        logging.debug('[ALU Control] Funct: %s', bin(funct))
         if control_signal.alu_op[0] is True:
             # Branch Equal (BEQ)
             self._control = 0b0110
         else:
             if control_signal.alu_op[1] is True:
                 match funct:
-                    case 0b100000: # ADD
+                    case 0b0000: # ADD
                         self._control = 0b0010
-                    case 0b100010: # SUB
+                    case 0b0010: # SUB
                         self._control = 0b0110
-                    case 0b100100: # AND
+                    case 0b0100: # AND
                         self._control = 0b0000
-                    case 0b100101: # OR
+                    case 0b0101: # OR
                         self._control = 0b0001
-                    case 0b101010: # SLT (Set Less Than)
+                    case 0b1010: # SLT (Set Less Than)
                         self._control = 0b0111
                     case _: # Default
                         raise ValueError('Invalid function code')
@@ -77,15 +81,40 @@ class ALU:
 
         match self._control:
             case 0b0010:
+                # ADD operation
                 self._result = self._a + self._b
+                logging.debug('[ALU] ADD operation performed: %s + %s = %s',
+                              self._a,
+                              self._b,
+                              self._result)
             case 0b0110:
+                # SUB operation
                 self._result = self._a - self._b
+                logging.debug('[ALU] SUB operation performed: %s - %s = %s',
+                              self._a,
+                              self._b,
+                              self._result)
             case 0b0000:
+                # AND operation
                 self._result = self._a & self._b
+                logging.debug('[ALU] AND operation performed: %s & %s = %s',
+                              self._a,
+                              self._b,
+                              self._result)
             case 0b0001:
+                # OR operation
                 self._result = self._a | self._b
+                logging.debug('[ALU] OR operation performed: %s | %s = %s',
+                              self._a,
+                              self._b,
+                              self._result)
             case 0b0111:
+                # SLT operation
                 self._result = int(self._a < self._b)
+                logging.debug('[ALU] SLT operation performed: %s < %s = %s',
+                              self._a,
+                              self._b,
+                              self._result)
             case _:
                 print('ALUControl:', bin(self._control))
                 raise ValueError('Invalid operation')

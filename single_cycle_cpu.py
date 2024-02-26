@@ -4,6 +4,7 @@ import logging
 from rv_units.control_unit import ControlUnit
 from rv_units.register_file import RegisterFile, DataRegister
 from rv_units.alu import ALU, ADDER
+from rv_units.data_memory import DataMemory
 
 class MUX:
     """This class represents a Multiplexer"""
@@ -40,15 +41,10 @@ class RiscV:
     """This class represents a Risc-V Single Cycle CPU simulator."""
     def __init__(self):
         self._imem: dict = {} # This is a dictionary of instructions
+        self._cycle_counter: int = 1 # For debugging purposes
 
         # Cache Memory on binary file
-        # If the file does not exist, it will be created
-        try:
-            self._data_mem = open('data_memory.bin', 'r+b') #type: ignore
-            logging.debug('[Emulator] Data Memory file found')
-        except FileNotFoundError:
-            self._data_mem = open('data_memory.bin', 'w+b')
-            logging.debug('[Emulator] Data Memory file not found, creating a new one')
+        self._data_mem = DataMemory()
 
         self._control: ControlUnit = ControlUnit() # Control Unit
         self._registers: RegisterFile = RegisterFile() # Register File
@@ -62,7 +58,7 @@ class RiscV:
 
     def __del__(self):
         logging.debug('[Emulator] Closing data memory file')
-        self._data_mem.close()
+        self._data_mem.__del__()
 
     def pc_value(self) -> int:
         """Returns the current value of the program counter register"""
@@ -104,14 +100,16 @@ class RiscV:
     @staticmethod
     def imm_gen(imm: str) -> DataRegister:
         """This function receives a 12-bit immediate value and sign extends it to 32 bits"""
-        temp = int(imm, 2).to_bytes(4, byteorder='big')
+        temp = int(imm, 2).to_bytes(4, byteorder='big', signed=True)
         imm32: DataRegister = DataRegister(bytearray.fromhex(temp.hex()))
-        logging.debug('[ImmGen] Immediate 32 value: %s', imm32)
+        logging.debug('[ImmGen] Immediate-32 value: %s | %s', int(imm32), imm32)
         return imm32
 
     def cycle(self) -> bool:
         """This is the main loop of the CPU"""
         # This code mimics the Risc-V Single Cycle Data Path
+        logging.debug('[Emulator] Starting cycle %d', self._cycle_counter)
+        self._registers.dump()
 
         # -----Instruction Fetch-----
 
@@ -136,6 +134,7 @@ class RiscV:
         except KeyError:
             logging.debug('[CPU] Instruction not found at address %s', hex(curr_addr))
             logging.debug('[CPU] Halting...\n')
+            self._cycle_counter = 0
             return False
 
 
@@ -148,12 +147,16 @@ class RiscV:
 
         # Decoding the Opcode
         opcode: int = int(instruction[25:32], 2)
-        self._control.set_opcode(opcode)
         logging.debug('[CPU] Opcode: %s', bin(opcode))
+        self._control.set_opcode(opcode)
 
-        # The next 12 bits are the immediate value
-        logging.debug('[CPU] Immediate value: %s', instruction[0:12])
-        imm: DataRegister = self.imm_gen(instruction[0:12])
+        # Immediate value
+        if instruction[25:32] == '0000011' or instruction[25:32] == '0010011':
+            logging.debug('[CPU] Immediate value: %s', instruction[0:12])
+            imm: DataRegister = self.imm_gen(instruction[0:12])
+        else:
+            logging.debug('[CPU] Immediate value: %s', instruction[0:8])
+            imm: DataRegister = self.imm_gen(instruction[0:8])
 
         # The next 5 bits are the source register 1
         rr_1: int = int(instruction[12:17], 2)
@@ -162,18 +165,25 @@ class RiscV:
         # The next 5 bits are the destination register
         rd: int = int(instruction[20:25], 2)
 
-        self._registers.select_register(rr_1, 1)
-        self._registers.select_register(rr_2, 2)
-        logging.debug('[CPU] Read Data 1: %s | Read Data 2: %s',
-                      self._registers.read_data(1), self._registers.read_data(2))
+        self._registers.select_register(read_register=rr_1, to_read_data=1)
+        self._registers.select_register(read_register=rr_2, to_read_data=2)
+        logging.debug('[CPU] Read Register 1: x%s | Read Register 2: x%s | Write Register: x%s',
+                       rr_1, rr_2, rd)
 
         # -----Execution-----
 
         # The ALU receives the source registers,
         # the immediate value and the ALU Control
 
+        # The ALU receives the source registers, the immediate value and the function code
+        # and the control signals to perform the operation.
+        logging.debug('[CPU] ALUOp: %s | Funct: %s', self._control.alu_op, instruction[0:7][::-1])
+        self._alu.alu_control(self._control, int(instruction[0:7][::-1], 2))
+
         # Select first ALU operand
-        logging.debug('[CPU] ALU Operand A: %s', self._registers.read_data(1))
+        logging.debug('[CPU] ALU Operand A: %s | %s',
+                      int(self._registers.read_data(1)),
+                      str(self._registers.read_data(1)))
         self._alu.set_op_a(self._registers.read_data(1))
 
         # Setting the ALU Multiplexer
@@ -182,16 +192,13 @@ class RiscV:
         self._b_sel.set_select(self._control.alu_src)
 
         # Select second ALU operand
-        logging.debug('[CPU] ALU Operand B: %s', self._b_sel.read())
+        logging.debug('[CPU] ALU Operand B: %s | %s',
+                      int(self._b_sel.read()),
+                      str(self._b_sel.read()))
         self._alu.set_op_b(self._b_sel.read())
 
-        # The ALU receives the source registers, the immediate value and the function code
-        # and the control signals to perform the operation.
-        logging.debug('[CPU] ALUOp: %s | Funct: %s', self._control.alu_op, int(instruction[0:5], 2))
-        self._alu.alu_control(self._control, int(instruction[0:5], 2))
-
         self._alu.do_op()
-        logging.debug('[CPU] ALU Result: %s', self._alu.result())
+        logging.debug('[CPU] ALU Result: %s | %s', self._alu.result(), bin(self._alu.result()))
 
         pc_add_offset: DataRegister = DataRegister(
             ADDER.do( # PC + Offset
@@ -201,44 +208,52 @@ class RiscV:
 
         # -----Memory Access-----
 
-        # TODO: tem que implementar todo esse negócio ainda
-
-        # -----Write Back-----
-        # fixme: como q isso ta salvando 6MB na memória com 12 instruções carregadas?
-
-        dmem_read_data: DataRegister = self._registers.zero()
+        dmem_read_data: DataRegister = DataRegister(0)
 
         if self._control.mem_write:
             # Write the data memory using the ALU result as the address
             # Dev Note: DataRegister should just return bytes if asked so
-            self._data_mem.seek(self._alu.result())
-            self._data_mem.write(bytes(self._registers.read_data(2)))
+            logging.debug('[CPU] Writing %s to data memory at address: %s',
+                          self._registers.read_data(2), hex(self._alu.result()))
+            self._data_mem.write(
+                address= self._alu.result(),
+                data= self._registers.read_data(2))
 
         elif self._control.mem_read:
             # Read the data memory using the ALU result as the address
-            dmem_read_data = DataRegister(
-                bytearray(self._data_mem.read(
-                        self._alu.result()
-                    )))
+            logging.debug('[CPU] Reading data memory at address: %s', hex(self._alu.result()))
+            dmem_read_data = self._data_mem.read(address= self._alu.result())
+            logging.debug('[CPU] Data Memory read: %s', dmem_read_data)
         else:
             pass # Logical "Don't Care"
 
+        # -----Write Back-----
+
         # Setting the Write Back Multiplexer
-        self._wb_sel.write(dmem_read_data, False)
-        self._wb_sel.write(DataRegister(self._alu.result()), True)
+        self._wb_sel.write(DataRegister(self._alu.result()), False)
+        self._wb_sel.write(dmem_read_data, True)
         self._wb_sel.set_select(self._control.mem_to_reg)
+        logging.debug('[CPU] Write Back MUX at %s: %s',
+                      int(self._control.mem_to_reg), self._wb_sel.read())
+
         # Writing the result to the destination register
         if self._control.reg_write:
+            logging.debug('[CPU] Writing %s to register x%s',
+                          int(self._wb_sel.read()), rd)
             self._registers.write_data(rd, self._wb_sel.read()) # type: ignore
             #-> maybe I need to fix this problems with the MUX returns types
 
         # Setting the PC Multiplexer
         self._pc_sel.write(pc_add_4, False)
         self._pc_sel.write(pc_add_offset, True)
+        logging.debug('[CPU] PC + 4 : %s | PC + Offset: %s',
+                      hex(int(pc_add_4)), hex(int(pc_add_offset)))
         self._pc_sel.set_select(
             self._control.branch and self._alu.zero() # Branch AND ALU Zero
             )
 
         self.pc = self._pc_sel.read() # type: ignore
         #print(self._control)
+        logging.debug('[CPU] End of cycle\n')
+        self._cycle_counter += 1
         return True
