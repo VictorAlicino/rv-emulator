@@ -73,6 +73,7 @@ class ALU:
             else:
                 # Load or Store Word (LW | SW)
                 self._control = 0b0010
+            self._zero = False
 
     def do_op(self) -> None:
         """Perform the operation"""
@@ -118,3 +119,7 @@ class ALU:
             case _:
                 print('ALUControl:', bin(self._control))
                 raise ValueError('Invalid operation')
+
+        if self._result == 0:
+            logging.debug('[ALU] Zero flag set')
+            self._zero = True

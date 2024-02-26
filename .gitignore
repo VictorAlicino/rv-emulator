@@ -6,3 +6,4 @@ __pycache__/
 data_memory.bin
 debug.log
 *.log
+*.bin

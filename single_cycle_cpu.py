@@ -150,10 +150,20 @@ class RiscV:
         logging.debug('[CPU] Opcode: %s', bin(opcode))
         self._control.set_opcode(opcode)
 
-        # Immediate value
-        if instruction[25:32] == '0000011' or instruction[25:32] == '0010011':
+        # Immediate value (Checking if it's I-type or S-type)
+        if instruction[25:32] == '0000011' or instruction[25:32] == '0010011': # I-type
             logging.debug('[CPU] Immediate value: %s', instruction[0:12])
             imm: DataRegister = self.imm_gen(instruction[0:12])
+        elif instruction[25:32] == '0100011': # S-type
+            logging.debug('[CPU] Immediate value: %s', instruction[0:7] + instruction[20:25])
+            imm: DataRegister = self.imm_gen(instruction[0:7] + instruction[20:25])
+        elif instruction[25:32] == '1100011': # B-type
+            logging.debug('[CPU] Immediate value: %s',
+                          instruction[0] + instruction[24] +
+                          instruction[1:7] + instruction[20:24] + '0')
+            imm: DataRegister = self.imm_gen(
+                instruction[0] + instruction[24] + 
+                instruction[1:7] + instruction[20:24] + '0')
         else:
             logging.debug('[CPU] Immediate value: %s', instruction[0:8])
             imm: DataRegister = self.imm_gen(instruction[0:8])
@@ -203,7 +213,7 @@ class RiscV:
         pc_add_offset: DataRegister = DataRegister(
             ADDER.do( # PC + Offset
                 curr_addr,
-                int(imm) >> 1) # ImmGen (Shift left 1)
+                int(imm)) # ImmGen
                 )
 
         # -----Memory Access-----
