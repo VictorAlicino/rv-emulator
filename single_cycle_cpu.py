@@ -1,6 +1,7 @@
 """Implementation of a Risc-V Single Cycle CPU simulator."""
 
 import logging
+import struct
 from rv_units.control_unit import ControlUnit
 from rv_units.register_file import RegisterFile, DataRegister
 from rv_units.alu import ALU, ADDER
@@ -100,16 +101,33 @@ class RiscV:
     @staticmethod
     def imm_gen(imm: str) -> DataRegister:
         """This function receives a 12-bit immediate value and sign extends it to 32 bits"""
-        temp = int(imm, 2).to_bytes(4, byteorder='big', signed=True)
+
+        # if the immediate value is negative, we need to sign extend it (2's complement)
+        if imm[0] == '1':
+            inverted = ''.join('1' if b == '0' else '0' for b in imm)
+            results=[]
+            carry = 1
+            for b in inverted[::-1]:
+                new_bit = int(b) ^ carry
+                carry = int(b) & carry
+                results.append(new_bit)
+            dec = ''.join(str(b) for b in results[::-1])
+            dec = int(dec, 2) * -1
+        else:
+            dec = int(imm, 2)
+        print(dec)
+        temp = dec.to_bytes(4, byteorder='big', signed=True)
         imm32: DataRegister = DataRegister(bytearray.fromhex(temp.hex()))
+        print(int(imm32))
         logging.debug('[ImmGen] Immediate-32 value: %s | %s', int(imm32), imm32)
+
         return imm32
 
     def cycle(self) -> bool:
         """This is the main loop of the CPU"""
         # This code mimics the Risc-V Single Cycle Data Path
         logging.debug('[Emulator] Starting cycle %d', self._cycle_counter)
-        self._registers.dump()
+        #self._registers.dump()
 
         # -----Instruction Fetch-----
 
