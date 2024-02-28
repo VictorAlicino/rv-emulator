@@ -47,33 +47,33 @@ class ALU:
         """Return the zero flag"""
         return self._zero
 
-    def alu_control(self, control_signal: ControlUnit, funct: int) -> None:
+    def alu_control(self, control_signal: ControlUnit, funct3: int, funct7: int) -> None:
         """Set the ALU control signal"""
         logging.debug('[ALU Control] Setting ALU control signal')
         logging.debug('[ALU Control] ALUOp: %s', control_signal.alu_op)
-        logging.debug('[ALU Control] Funct: %s', bin(funct))
+        logging.debug('[ALU Control] Funct3: %s Funct7: %s', bin(funct3), bin(funct7))
         if control_signal.alu_op[0] is True:
             # Branch Equal (BEQ)
             self._control = 0b0110
         else:
             if control_signal.alu_op[1] is True:
-                match funct:
-                    case 0b0000: # ADD
-                        self._control = 0b0010
-                    case 0b0010: # SUB
-                        self._control = 0b0110
-                    case 0b0100: # AND
-                        self._control = 0b0000
-                    case 0b0101: # OR
-                        self._control = 0b0001
-                    case 0b1010: # SLT (Set Less Than)
-                        self._control = 0b0111
-                    case _: # Default
-                        raise ValueError('Invalid function code')
+                if funct7 == 0b0100000:
+                    # SUB operation
+                    self._control = 0b0110
+                else:
+                    match funct3:
+                        case 0b0000: # ADD
+                            self._control = 0b0010
+                        case 0b0111: # AND
+                            self._control = 0b0000
+                        case 0b0110: # OR
+                            self._control = 0b0001
+                        case _: # Default
+                            raise ValueError('Invalid function code')
             else:
                 # Load or Store Word (LW | SW)
                 self._control = 0b0010
-            self._zero = False
+        self._zero = False
 
     def do_op(self) -> None:
         """Perform the operation"""

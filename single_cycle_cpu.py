@@ -115,10 +115,8 @@ class RiscV:
             dec = int(dec, 2) * -1
         else:
             dec = int(imm, 2)
-        print(dec)
         temp = dec.to_bytes(4, byteorder='big', signed=True)
         imm32: DataRegister = DataRegister(bytearray.fromhex(temp.hex()))
-        print(int(imm32))
         logging.debug('[ImmGen] Immediate-32 value: %s | %s', int(imm32), imm32)
 
         return imm32
@@ -206,7 +204,11 @@ class RiscV:
         # The ALU receives the source registers, the immediate value and the function code
         # and the control signals to perform the operation.
         logging.debug('[CPU] ALUOp: %s | Funct: %s', self._control.alu_op, instruction[0:7][::-1])
-        self._alu.alu_control(self._control, int(instruction[0:7][::-1], 2))
+        self._alu.alu_control(
+            control_signal=self._control,
+            funct3=int(instruction[17:20], 2),
+            funct7=int(instruction[0:7], 2)
+            )
 
         # Select first ALU operand
         logging.debug('[CPU] ALU Operand A: %s | %s',
