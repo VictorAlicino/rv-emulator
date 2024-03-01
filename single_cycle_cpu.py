@@ -120,6 +120,11 @@ class RiscV:
         logging.debug('[ImmGen] Immediate-32 value: %s | %s', int(imm32), imm32)
 
         return imm32
+    
+    @staticmethod
+    def xor(a: int, b: int) -> bool:
+        """This function returns the XOR of two integers"""
+        return bool(a) != bool(b)
 
     def cycle(self) -> bool:
         """This is the main loop of the CPU"""
@@ -165,6 +170,12 @@ class RiscV:
         opcode: int = int(instruction[25:32], 2)
         logging.debug('[CPU] Opcode: %s', bin(opcode))
         self._control.set_opcode(opcode)
+        if opcode == 0b1100011:
+            if int(instruction[17:20], 2) == 0b000:
+                logging.debug('[CPU] BRANCH EQUAL instruction detected')
+            if int(instruction[17:20], 2) == 0b001:
+                logging.debug('[CPU] BRANCH NOT EQUAL instruction detected')
+            # Yeah I know, "always write an else"... I will fix this later (or not  ¯\_(ツ)_/¯)
 
         # Immediate value (Checking if it's I-type or S-type)
         if instruction[25:32] == '0000011' or instruction[25:32] == '0010011': # I-type
@@ -278,12 +289,18 @@ class RiscV:
         self._pc_sel.write(pc_add_offset, True)
         logging.debug('[CPU] PC + 4 : %s | PC + Offset: %s',
                       hex(int(pc_add_4)), hex(int(pc_add_offset)))
+        # Branch AND (ALU Zero XOR Funct3 first bit) 
+        print(f'{self._control.branch} XOR {bool(int(instruction[17:20], 2))} : {(self._alu.zero() != bool(int(instruction[17:20], 2)))}')
         self._pc_sel.set_select(
-            self._control.branch and self._alu.zero() # Branch AND ALU Zero
+            self._control.branch and (
+                self._alu.zero() != int(instruction[17:20], 2)
+                )
             )
 
         self.pc = self._pc_sel.read() # type: ignore
         #print(self._control)
+        if not self._pc_sel.read(): # type: ignore
+            logging.debug('[CPU] Branching...')
         logging.debug('[CPU] End of cycle\n')
         self._cycle_counter += 1
         return True

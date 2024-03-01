@@ -63,7 +63,7 @@ class ControlUnit:
                 'branch': True,
                 'alu_op': (True, False)
                 })
-                logging.debug('[Control Unit] BRANCH EQUAL instruction detected')
+                logging.debug('[Control Unit] BRANCH instruction detected')
             case 0b1100011: # BNE
                 self._set_control_signals({
                 'alu_src': False,
