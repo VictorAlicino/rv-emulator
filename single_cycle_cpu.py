@@ -289,8 +289,7 @@ class RiscV:
         self._pc_sel.write(pc_add_offset, True)
         logging.debug('[CPU] PC + 4 : %s | PC + Offset: %s',
                       hex(int(pc_add_4)), hex(int(pc_add_offset)))
-        # Branch AND (ALU Zero XOR Funct3 first bit) 
-        print(f'{self._control.branch} XOR {bool(int(instruction[17:20], 2))} : {(self._alu.zero() != bool(int(instruction[17:20], 2)))}')
+        # Branch AND (ALU Zero XOR Funct3 first bit)
         self._pc_sel.set_select(
             self._control.branch and (
                 self._alu.zero() != int(instruction[17:20], 2)
@@ -301,6 +300,8 @@ class RiscV:
         #print(self._control)
         if not self._pc_sel.read(): # type: ignore
             logging.debug('[CPU] Branching...')
+        if getattr(self._pc_sel, '_select'): # type: ignore
+            logging.debug('[CPU] Branching to %s', hex(int(pc_add_offset)))
         logging.debug('[CPU] End of cycle\n')
         self._cycle_counter += 1
         return True
